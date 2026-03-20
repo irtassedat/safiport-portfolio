@@ -125,6 +125,20 @@ export default function Contact() {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a
+              href="/cv"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-sky-600 to-sky-500 text-white rounded-xl text-sm hover:opacity-90 transition-opacity font-medium"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              CV
+            </a>
+            <a
+              href="/case-study"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-400 text-white rounded-xl text-sm hover:opacity-90 transition-opacity font-medium"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              Case Study
+            </a>
+            <a
               href="https://github.com/irtassedat/safiport-portfolio"
               target="_blank"
               rel="noopener noreferrer"
@@ -135,7 +149,7 @@ export default function Contact() {
             </a>
             <a
               href="#analysis"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-sky-600 to-orange-500 text-white rounded-xl text-sm hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-surface border border-border rounded-xl text-sm hover:border-orange-500/30 transition-colors"
             >
               {t.contact.backToAnalysis}
             </a>
