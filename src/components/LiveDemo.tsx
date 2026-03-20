@@ -44,37 +44,37 @@ const terminalsEn = [
 const alertsTr = [
   { time: "14:32", type: "warning", msg: "Vince A3 — SmartFleet verileri 48 saat icinde bakim gerektirdigini gosteriyor. OPUS TOS'a otomatik planlama onerisi gonderildi. [OPUS \u2194 SmartFleet Entegrasyon]" },
   { time: "14:28", type: "info", msg: "TRASSIR Kamera #247 — Konteyner MSCU7142589 uzerinde hasar tespit edildi. ISO 6346 OCR ile otomatik kayit olusturuldu. [AI Vision Modulu]" },
-  { time: "14:15", type: "success", msg: "MSC Luna yanaslma tamamladi (Rihtim 2). 2,847 TEU manifesto eslesmesi %100. Gulece raporu otomatik olusturuldu. [Otomatik Raporlama]" },
+  { time: "14:15", type: "success", msg: "MSC Luna yanaslma tamamladi (Rihtim 2). 2,847 TEU manifesto eslesmesi %100. GullsEye raporu otomatik olusturuldu. [Otomatik Raporlama]" },
   { time: "14:02", type: "info", msg: "Ro-Ro Terminal — Son 1 saatte 84 arac yuklemesi. Park alani dolulugu %67. Tahmini bos alan: 4,950 slot. [Kapasite Tahmin Modeli]" },
   { time: "13:48", type: "warning", msg: "Tank T-12 seviye sensoru — %92 doluluk. Otomatik bosaltma emri olusturuldu. API 650 uyumluluk kontrolu tamamlandi. [Tank IoT Entegrasyon]" },
   { time: "13:35", type: "success", msg: "Intermodal — 47 vagon Ankara hattina sevk edildi. Transit suresi tahmini: 14 saat. Demiryolu kapasite kullanimi: %72. [Intermodal Planlama]" },
   { time: "13:22", type: "info", msg: "PPE Izleme — Saha calisan uyumlulugu: %98.4 (baret), %97.1 (yelek). 3 uyari olusturuldu, saha amirine bildirildi. [AI PPE Modulu]" },
-  { time: "13:10", type: "success", msg: "Vardiya Raporu (06:00-14:00) — 847 konteyner hareketi, 12 gemi operasyonu, 0 is guvenligi olayii. PDF ve email otomatik gonderildi. [Gulece Degisimi]" },
+  { time: "13:10", type: "success", msg: "Vardiya Raporu (06:00-14:00) — 847 konteyner hareketi, 12 gemi operasyonu, 0 is guvenligi olayii. PDF ve email otomatik gonderildi. [GullsEye Degisimi]" },
 ];
 
 const alertsEn = [
   { time: "14:32", type: "warning", msg: "Crane A3 \u2014 SmartFleet data shows maintenance needed within 48 hours. Auto planning suggestion sent to OPUS TOS. [OPUS \u2194 SmartFleet Integration]" },
   { time: "14:28", type: "info", msg: "TRASSIR Camera #247 \u2014 Damage detected on container MSCU7142589. Auto record created via ISO 6346 OCR. [AI Vision Module]" },
-  { time: "14:15", type: "success", msg: "MSC Luna berthing complete (Berth 2). 2,847 TEU manifest match 100%. G\u00FCle\u00E7e report auto-generated. [Automated Reporting]" },
+  { time: "14:15", type: "success", msg: "MSC Luna berthing complete (Berth 2). 2,847 TEU manifest match 100%. GullsEye report auto-generated. [Automated Reporting]" },
   { time: "14:02", type: "info", msg: "Ro-Ro Terminal \u2014 84 vehicle loadings in last hour. Parking occupancy 67%. Estimated free slots: 4,950. [Capacity Prediction Model]" },
   { time: "13:48", type: "warning", msg: "Tank T-12 level sensor \u2014 92% full. Auto discharge order created. API 650 compliance check passed. [Tank IoT Integration]" },
   { time: "13:35", type: "success", msg: "Intermodal \u2014 47 wagons dispatched to Ankara line. Est. transit: 14 hours. Railway capacity usage: 72%. [Intermodal Planning]" },
   { time: "13:22", type: "info", msg: "PPE Monitoring \u2014 Field worker compliance: 98.4% (helmet), 97.1% (vest). 3 warnings issued, notified shift supervisor. [AI PPE Module]" },
-  { time: "13:10", type: "success", msg: "Shift Report (06:00-14:00) \u2014 847 container movements, 12 vessel ops, 0 safety incidents. PDF & email auto-sent. [G\u00FCle\u00E7e Replacement]" },
+  { time: "13:10", type: "success", msg: "Shift Report (06:00-14:00) \u2014 847 container movements, 12 vessel ops, 0 safety incidents. PDF & email auto-sent. [GullsEye Replacement]" },
 ];
 
 const integrationsTr = [
   { system: "OPUS TOS", status: "Entegre", color: "#22c55e", desc: "Konteyner planlama & yard yonetimi" },
   { system: "TRASSIR VMS", status: "Entegre", color: "#22c55e", desc: "500 kamera AI vision + guvenlik" },
   { system: "Kalmar SmartFleet", status: "Entegre", color: "#22c55e", desc: "16 RTG vince izleme & bakim" },
-  { system: "Gulece", status: "Devre Disi", color: "#ef4444", desc: "Otomatik raporlama ile degistirildi" },
+  { system: "GullsEye", status: "Devre Disi", color: "#ef4444", desc: "Otomatik raporlama ile degistirildi" },
 ];
 
 const integrationsEn = [
   { system: "OPUS TOS", status: "Integrated", color: "#22c55e", desc: "Container planning & yard management" },
   { system: "TRASSIR VMS", status: "Integrated", color: "#22c55e", desc: "500 camera AI vision + security" },
   { system: "Kalmar SmartFleet", status: "Integrated", color: "#22c55e", desc: "16 RTG crane monitoring & maint." },
-  { system: "G\u00FCle\u00E7e", status: "Replaced", color: "#ef4444", desc: "Replaced by automated reporting" },
+  { system: "GullsEye", status: "Replaced", color: "#ef4444", desc: "Replaced by automated reporting" },
 ];
 
 const kpiColors = ["#0284c7", "#f97316", "#64748b", "#22c55e"];

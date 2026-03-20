@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { useState, useRef } from "react";
 import { useLang } from "@/lib/i18n";
 
 const icons = [
@@ -51,7 +51,39 @@ export default function PainPoints() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
+        {/* Animated severity summary */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-wrap justify-center gap-3 mt-8 mb-8"
+        >
+          {[
+            { label: lang === "tr" ? "Kritik" : "Critical", count: 2, color: "#ef4444" },
+            { label: lang === "tr" ? "Yuksek" : "High", count: 2, color: "#f97316" },
+            { label: lang === "tr" ? "Orta-Yuksek" : "Medium-High", count: 1, color: "#eab308" },
+            { label: lang === "tr" ? "Stratejik" : "Strategic", count: 1, color: "#0284c7" },
+          ].map((s, i) => (
+            <motion.div
+              key={s.label}
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 + i * 0.1, type: "spring", stiffness: 200 }}
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface border border-border/50"
+            >
+              <motion.span
+                className="w-2 h-2 rounded-full"
+                style={{ backgroundColor: s.color }}
+                animate={{ scale: [1, 1.3, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: i * 0.5 }}
+              />
+              <span className="text-[10px] font-medium" style={{ color: s.color }}>{s.count}x {s.label}</span>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {t.painPoints.items.map((item, i) => {
             const isExpanded = expanded === i;
             const color = severityColors[item.severity] || "#64748b";
@@ -83,11 +115,14 @@ export default function PainPoints() {
 
                 <p className="text-xs text-foreground/50 leading-relaxed mb-3">{item.desc}</p>
 
+                <AnimatePresence>
                 {isExpanded && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
-                    className="space-y-2 border-t border-border/50 pt-3"
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="space-y-2 border-t border-border/50 pt-3 overflow-hidden"
                   >
                     <div className="p-2 rounded-lg bg-red-500/5">
                       <div className="text-[9px] text-red-400 font-mono uppercase tracking-wider mb-0.5">{lang === "tr" ? "Mevcut Durum" : "Current State"}</div>
@@ -103,6 +138,7 @@ export default function PainPoints() {
                     </div>
                   </motion.div>
                 )}
+                </AnimatePresence>
 
                 {!isExpanded && (
                   <div className="text-[9px] text-foreground/20 font-mono text-center pt-1">

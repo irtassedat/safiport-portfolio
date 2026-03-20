@@ -89,12 +89,19 @@ export default function Hero() {
             <div className="p-4 rounded-xl bg-surface/40 backdrop-blur-sm border border-border/30">
               <div className="text-[9px] text-sky-400 uppercase tracking-wider mb-2 font-bold">SAFiPORT DERiNCE</div>
               <div className="grid grid-cols-2 gap-2">
-                {t.hero.portStats.map((stat) => (
-                  <div key={stat.label} className="p-2 rounded-lg bg-background/40 border border-border/20">
+                {t.hero.portStats.map((stat, i) => (
+                  <motion.div
+                    key={stat.label}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.5 + i * 0.1, type: "spring", stiffness: 200 }}
+                    whileHover={{ scale: 1.03, borderColor: "rgba(2,132,199,0.3)" }}
+                    className="p-2 rounded-lg bg-background/40 border border-border/20 transition-colors"
+                  >
                     <div className="text-lg font-bold text-sky-400">{stat.value}</div>
                     <div className="text-[9px] font-medium text-foreground/60">{stat.label}</div>
                     <div className="text-[8px] text-foreground/30">{stat.sub}</div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -103,11 +110,18 @@ export default function Hero() {
             <div className="p-4 rounded-xl bg-surface/40 backdrop-blur-sm border border-border/30">
               <div className="text-[9px] text-orange-400 uppercase tracking-wider mb-2 font-bold">{lang === "tr" ? "BENiM TEKNiK ALTYAPiM" : "MY TECHNICAL BACKGROUND"}</div>
               <div className="grid grid-cols-4 gap-2">
-                {t.hero.myStats.map((stat) => (
-                  <div key={stat.label} className="p-1.5 rounded-md bg-background/30 text-center">
+                {t.hero.myStats.map((stat, i) => (
+                  <motion.div
+                    key={stat.label}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8 + i * 0.08 }}
+                    whileHover={{ scale: 1.05 }}
+                    className="p-1.5 rounded-md bg-background/30 text-center cursor-default"
+                  >
                     <div className="text-sm font-bold text-orange-400">{stat.value}</div>
                     <div className="text-[7px] text-foreground/40 uppercase">{stat.label}</div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>

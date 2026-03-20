@@ -136,6 +136,45 @@ export default function CompetitorBench() {
           ))}
         </motion.div>
 
+        {/* Digital Maturity Scores */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-6 grid sm:grid-cols-3 gap-4"
+        >
+          {[
+            { name: "SafiPort", score: 15, maxScore: 100, color: "#ef4444", gradient: "from-red-500/10 to-red-500/5" },
+            { name: "DP World Evyap", score: 78, maxScore: 100, color: "#22c55e", gradient: "from-green-500/10 to-green-500/5" },
+            { name: "Yilport", score: 72, maxScore: 100, color: "#3b82f6", gradient: "from-blue-500/10 to-blue-500/5" },
+          ].map((port, i) => (
+            <motion.div
+              key={port.name}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className={`p-4 rounded-xl bg-gradient-to-br ${port.gradient} border border-border/50`}
+            >
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-semibold">{port.name}</span>
+                <span className="text-lg font-bold" style={{ color: port.color }}>{port.score}%</span>
+              </div>
+              <div className="text-[9px] text-foreground/30 mb-2">{lang === "tr" ? "Dijital Olgunluk Skoru" : "Digital Maturity Score"}</div>
+              <div className="h-2 bg-background/50 rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${port.score}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.2, delay: 0.3 + i * 0.15, ease: "easeOut" }}
+                  className="h-full rounded-full"
+                  style={{ backgroundColor: port.color }}
+                />
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
         {/* Verdict */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}

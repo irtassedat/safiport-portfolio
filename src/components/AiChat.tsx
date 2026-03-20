@@ -12,11 +12,11 @@ interface QA {
 const qaTr: QA[] = [
   {
     question: "SafiPort'a Somut Neler Katabilirim?",
-    answer: "1) Birlesik Operasyon Merkezi — 6 terminali tek ekranda izleyen gercek zamanli dashboard. OPUS TOS, TRASSIR VMS, Kalmar SmartFleet entegrasyonu.\n2) Gulece Degisimi — Manuel raporlamayi tamamen otomatik hale getiren sistem. PDF/Excel export, email/Telegram bildirim.\n3) AI Vision Sistemi — 500 kamera uzerinde konteyner OCR, hasar tespiti, PPE uyumluluk izleme.\n4) Holding KPI Portali — SafiPort + Bilecik Cimento + Corum Seker verilerini birlestiren konsolide dashboard.\n5) Endustri Muhendisligi — Vince verimliligi analizi, rihtim kapasite optimizasyonu, kuyruk modelleme.",
+    answer: "1) Birlesik Operasyon Merkezi — 6 terminali tek ekranda izleyen gercek zamanli dashboard. OPUS TOS, TRASSIR VMS, Kalmar SmartFleet entegrasyonu.\n2) GullsEye Degisimi — Manuel raporlamayi tamamen otomatik hale getiren sistem. PDF/Excel export, email/Telegram bildirim.\n3) AI Vision Sistemi — 500 kamera uzerinde konteyner OCR, hasar tespiti, PPE uyumluluk izleme.\n4) Holding KPI Portali — SafiPort + Bilecik Cimento + Corum Seker verilerini birlestiren konsolide dashboard.\n5) Endustri Muhendisligi — Vince verimliligi analizi, rihtim kapasite optimizasyonu, kuyruk modelleme.",
   },
   {
-    question: "Gulece Raporlama Sistemini Nasil Degistiririm?",
-    answer: "Adim 1: Gulece'nin urettigi tum rapor formatlarini analiz etme (hafta 1-2).\nAdim 2: OPUS TOS API'sinden konteyner verilerini, SmartFleet'ten vince verilerini, TRASSIR'dan kamera event'lerini cekecek veri katmani (hafta 3-4).\nAdim 3: Otomatik rapor olusturma modulu — gunluk vardiya raporu, haftalik ozet, aylik performans. Gulece formatina birebir uyumlu PDF/Excel cikti (hafta 5-8).\nAdim 4: Email + Telegram + dashboard uzerinden gercek zamanli erisim. Yonetim, Gulece acmadan tum verileri anlik gorur (hafta 9-12).\nSonuc: Gulece'ye bagimlilik sifira iner, veri gecikmesi ortadan kalkar.",
+    question: "GullsEye Raporlama Sistemini Nasil Degistiririm?",
+    answer: "Adim 1: GullsEye'nin urettigi tum rapor formatlarini analiz etme (hafta 1-2).\nAdim 2: OPUS TOS API'sinden konteyner verilerini, SmartFleet'ten vince verilerini, TRASSIR'dan kamera event'lerini cekecek veri katmani (hafta 3-4).\nAdim 3: Otomatik rapor olusturma modulu — gunluk vardiya raporu, haftalik ozet, aylik performans. GullsEye formatina birebir uyumlu PDF/Excel cikti (hafta 5-8).\nAdim 4: Email + Telegram + dashboard uzerinden gercek zamanli erisim. Yonetim, GullsEye acmadan tum verileri anlik gorur (hafta 9-12).\nSonuc: GullsEye'ye bagimlilik sifira iner, veri gecikmesi ortadan kalkar.",
   },
   {
     question: "6 Terminali Nasil Birlestiririm?",
@@ -39,11 +39,11 @@ const qaTr: QA[] = [
 const qaEn: QA[] = [
   {
     question: "What Can I Concretely Bring to SafiPort?",
-    answer: "1) Unified Operations Center \u2014 Real-time dashboard monitoring all 6 terminals. OPUS TOS, TRASSIR VMS, Kalmar SmartFleet integration.\n2) G\u00FCle\u00E7e Replacement \u2014 System that fully automates manual reporting. PDF/Excel export, email/Telegram notifications.\n3) AI Vision System \u2014 Container OCR, damage detection, PPE compliance monitoring on 500 cameras.\n4) Holding KPI Portal \u2014 Consolidated dashboard unifying SafiPort + Bilecik Cement + Corum Sugar data.\n5) Industrial Engineering \u2014 Crane efficiency analysis, berth capacity optimization, queue modeling.",
+    answer: "1) Unified Operations Center \u2014 Real-time dashboard monitoring all 6 terminals. OPUS TOS, TRASSIR VMS, Kalmar SmartFleet integration.\n2) GullsEye Replacement \u2014 System that fully automates manual reporting. PDF/Excel export, email/Telegram notifications.\n3) AI Vision System \u2014 Container OCR, damage detection, PPE compliance monitoring on 500 cameras.\n4) Holding KPI Portal \u2014 Consolidated dashboard unifying SafiPort + Bilecik Cement + Corum Sugar data.\n5) Industrial Engineering \u2014 Crane efficiency analysis, berth capacity optimization, queue modeling.",
   },
   {
-    question: "How Would I Replace the G\u00FCle\u00E7e Reporting System?",
-    answer: "Step 1: Analyze all report formats G\u00FCle\u00E7e currently produces (week 1-2).\nStep 2: Build data layer pulling container data from OPUS TOS API, crane data from SmartFleet, camera events from TRASSIR (week 3-4).\nStep 3: Automated report generation module \u2014 daily shift report, weekly summary, monthly performance. PDF/Excel output format-compatible with G\u00FCle\u00E7e (week 5-8).\nStep 4: Real-time access via email + Telegram + dashboard. Management sees all data instantly without opening G\u00FCle\u00E7e (week 9-12).\nResult: G\u00FCle\u00E7e dependency drops to zero, data delay eliminated.",
+    question: "How Would I Replace the GullsEye Reporting System?",
+    answer: "Step 1: Analyze all report formats GullsEye currently produces (week 1-2).\nStep 2: Build data layer pulling container data from OPUS TOS API, crane data from SmartFleet, camera events from TRASSIR (week 3-4).\nStep 3: Automated report generation module \u2014 daily shift report, weekly summary, monthly performance. PDF/Excel output format-compatible with GullsEye (week 5-8).\nStep 4: Real-time access via email + Telegram + dashboard. Management sees all data instantly without opening GullsEye (week 9-12).\nResult: GullsEye dependency drops to zero, data delay eliminated.",
   },
   {
     question: "How Would I Unify All 6 Terminals?",

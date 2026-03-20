@@ -4,6 +4,7 @@ import PainPoints from "@/components/PainPoints";
 import GitHubProjects from "@/components/GitHubProjects";
 import TechStack from "@/components/TechStack";
 import CompetitorBench from "@/components/CompetitorBench";
+import SystemArchitecture from "@/components/SystemArchitecture";
 import LiveDemo from "@/components/LiveDemo";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -43,6 +44,7 @@ export default async function Home() {
         <Navbar />
         <Hero />
         <PainPoints />
+        <SystemArchitecture />
         <LiveDemo />
         <CompetitorBench />
         <GitHubProjects repos={repos} profile={profile} />

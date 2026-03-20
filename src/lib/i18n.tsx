@@ -18,7 +18,7 @@ const dict = {
       badge: "SafiPort Derince — 1.2 Milyon m\u00B2 Liman Alani",
       titleA: "Endustri Muhendisi + Full-Stack Developer = ",
       titleB: "SafiPort'un Ihtiyaci",
-      desc: "SafiPort Derince, Turkiye'nin en buyuk cok amacli limani: 6 terminal, 1.2M m\u00B2, 500+ kamera, 2,272m rihtim. Ama dijital altyapi parcali — OPUS TOS sadece konteyner terminalini kaplyor, diger 5 terminal Excel ve Gulece ile raporlaniyor, 3 ana sistem (OPUS, TRASSIR, SmartFleet) birbiriyle konusmuyor. 20 kislik IT ekibinde sifir yazilimci var. Ben bu boslugu doldurmak icin buradayim.",
+      desc: "SafiPort Derince, Turkiye'nin en buyuk cok amacli limani: 6 terminal, 1.2M m\u00B2, 500+ kamera, 2,272m rihtim. Ama dijital altyapi parcali — OPUS TOS sadece konteyner terminalini kaplyor, diger 5 terminal Excel ve GullsEye ile raporlaniyor, 3 ana sistem (OPUS, TRASSIR, SmartFleet) birbiriyle konusmuyor. 20 kislik IT ekibinde sifir yazilimci var. Ben bu boslugu doldurmak icin buradayim.",
       cta1: "Sorunlari Gor",
       cta2: "Cozum Demo",
       portStats: [
@@ -44,10 +44,10 @@ const dict = {
       subtitle: "40+ saat arastirma, kurumsal kaynaklar, sektorel raporlar ve teknik dokumantasyondan derlenmistir. Her sorun somut veriyle desteklenmektedir.",
       items: [
         {
-          title: "Gulece & Manuel Raporlama",
+          title: "GullsEye & Manuel Raporlama",
           severity: "Kritik",
-          desc: "Operasyonel raporlar Gulece sistemi ve Excel tablolariyla hazirlaniyor. Her terminal kendi raporlama yapisina sahip — birlestirme manuel, gecikme kacinilamaz. Vardiyadaki toplam konteyner hareketi, vince verimliligi, rihtim dolulugu gibi KPI'lar anlik degil, geri donusumsuz.",
-          current: "Gulece + Excel + manuel birlestirme",
+          desc: "Operasyonel raporlar GullsEye sistemi ve Excel tablolariyla hazirlaniyor. Her terminal kendi raporlama yapisina sahip — birlestirme manuel, gecikme kacinilamaz. Vardiyadaki toplam konteyner hareketi, vince verimliligi, rihtim dolulugu gibi KPI'lar anlik degil, geri donusumsuz.",
+          current: "GullsEye + Excel + manuel birlestirme",
           impact: "Karar gecikmesi, veri tutarsizligi, yonetim koru gorme",
           solution: "Gercek zamanli otomatik raporlama dashboard'u — tum terminalleri tek ekranda birlestiren, PDF/Excel export destekli, rol tabanli erisimli platform",
         },
@@ -123,7 +123,7 @@ const dict = {
       categories: [
         { name: "Birlesik Dijital Platform", safi: "Yok", evyap: "Cisco Smart Port", yilport: "SAP Atlas" },
         { name: "AI / Makine Ogrenmesi", safi: "Yok", evyap: "Cisco AI Analytics", yilport: "Kismi" },
-        { name: "Gercek Zamanli Dashboard", safi: "Yok (Gulece/Excel)", evyap: "Evet", yilport: "SAP Fiori" },
+        { name: "Gercek Zamanli Dashboard", safi: "Yok (GullsEye/Excel)", evyap: "Evet", yilport: "SAP Fiori" },
         { name: "ERP Entegrasyonu", safi: "Yok", evyap: "Evet", yilport: "SAP S/4HANA" },
         { name: "In-House Gelistirme", safi: "0 yazilimci", evyap: "Evet", yilport: "Evet" },
         { name: "IoT Entegrasyonu", safi: "SmartFleet (silolu)", evyap: "Cisco IoT Gateway", yilport: "Kismi" },
@@ -217,7 +217,7 @@ const dict = {
           week: "Hafta 1-2",
           title: "Sistem Kesfi & Audit",
           tasks: [
-            "Gulece raporlama sistemini derinlemesine inceleme",
+            "GullsEye raporlama sistemini derinlemesine inceleme",
             "OPUS TOS API dokumantasyonu ve veri semasininin haritalanmasi",
             "TRASSIR VMS SDK erisimi ve kamera yerlesiim planinin cikarilmasi",
             "Kalmar SmartFleet data feed'lerinin analizi",
@@ -243,19 +243,19 @@ const dict = {
             "6 terminal tek ekran dashboard'unun gelistirilmesi",
             "Gercek zamanli KPI paneli (konteyner throughput, vince verimliiligi, rihtim dolulugu)",
             "AI alert sistemi — OPUS + TRASSIR + SmartFleet cross-reference",
-            "Otomatik vardiya raporu olusturma (Gulece'yi devre disi birakan)",
+            "Otomatik vardiya raporu olusturma (GullsEye'yi devre disi birakan)",
             "Mobil responsive tasarim (saha ekipleri icin)",
           ],
         },
         {
           week: "Hafta 9-12",
-          title: "Otomatik Raporlama & Gulece Degisimi",
+          title: "Otomatik Raporlama & GullsEye Degisimi",
           tasks: [
             "Gunluk/haftalik/aylik otomatik rapor olusturma modulu",
             "PDF ve Excel export (mevcut formatlara uyumlu)",
             "Email ve Telegram bildirim entegrasyonu",
             "Terminal bazli ve holding bazli konsolide raporlar",
-            "Gulece sisteminden tamamen bagimsiz calisan raporlama altyapisi",
+            "GullsEye sisteminden tamamen bagimsiz calisan raporlama altyapisi",
           ],
         },
         {
@@ -311,7 +311,7 @@ const dict = {
       badge: "SafiPort Derince \u2014 1.2 Million m\u00B2 Port Area",
       titleA: "Industrial Engineer + Full-Stack Developer = ",
       titleB: "What SafiPort Needs",
-      desc: "SafiPort Derince is Turkey's largest multi-purpose port: 6 terminals, 1.2M m\u00B2, 500+ cameras, 2,272m berth. But the digital infrastructure is fragmented \u2014 OPUS TOS covers only the container terminal, the other 5 terminals rely on Excel and G\u00FCle\u00E7e for reporting, 3 core systems (OPUS, TRASSIR, SmartFleet) don't communicate. The 20-person IT team has zero software developers. I'm here to fill this gap.",
+      desc: "SafiPort Derince is Turkey's largest multi-purpose port: 6 terminals, 1.2M m\u00B2, 500+ cameras, 2,272m berth. But the digital infrastructure is fragmented \u2014 OPUS TOS covers only the container terminal, the other 5 terminals rely on Excel and GullsEye for reporting, 3 core systems (OPUS, TRASSIR, SmartFleet) don't communicate. The 20-person IT team has zero software developers. I'm here to fill this gap.",
       cta1: "See the Problems",
       cta2: "Solution Demo",
       portStats: [
@@ -337,10 +337,10 @@ const dict = {
       subtitle: "Compiled from 40+ hours of research, corporate sources, industry reports, and technical documentation. Each issue is backed by concrete data.",
       items: [
         {
-          title: "G\u00FCle\u00E7e & Manual Reporting",
+          title: "GullsEye & Manual Reporting",
           severity: "Critical",
-          desc: "Operational reports are prepared using the G\u00FCle\u00E7e system and Excel spreadsheets. Each terminal has its own reporting structure \u2014 consolidation is manual, delays are inevitable. KPIs like shift container movements, crane efficiency, and berth occupancy are not real-time.",
-          current: "G\u00FCle\u00E7e + Excel + manual consolidation",
+          desc: "Operational reports are prepared using the GullsEye system and Excel spreadsheets. Each terminal has its own reporting structure \u2014 consolidation is manual, delays are inevitable. KPIs like shift container movements, crane efficiency, and berth occupancy are not real-time.",
+          current: "GullsEye + Excel + manual consolidation",
           impact: "Decision delays, data inconsistency, management blind spots",
           solution: "Real-time automated reporting dashboard \u2014 unifying all terminals on one screen with PDF/Excel export and role-based access",
         },
@@ -416,7 +416,7 @@ const dict = {
       categories: [
         { name: "Unified Digital Platform", safi: "None", evyap: "Cisco Smart Port", yilport: "SAP Atlas" },
         { name: "AI / Machine Learning", safi: "None", evyap: "Cisco AI Analytics", yilport: "Partial" },
-        { name: "Real-Time Dashboard", safi: "None (G\u00FCle\u00E7e/Excel)", evyap: "Yes", yilport: "SAP Fiori" },
+        { name: "Real-Time Dashboard", safi: "None (GullsEye/Excel)", evyap: "Yes", yilport: "SAP Fiori" },
         { name: "ERP Integration", safi: "None", evyap: "Yes", yilport: "SAP S/4HANA" },
         { name: "In-House Development", safi: "0 developers", evyap: "Yes", yilport: "Yes" },
         { name: "IoT Integration", safi: "SmartFleet (siloed)", evyap: "Cisco IoT Gateway", yilport: "Partial" },
@@ -510,7 +510,7 @@ const dict = {
           week: "Week 1-2",
           title: "System Discovery & Audit",
           tasks: [
-            "Deep-dive into G\u00FCle\u00E7e reporting system",
+            "Deep-dive into GullsEye reporting system",
             "OPUS TOS API documentation and data schema mapping",
             "TRASSIR VMS SDK access and camera layout mapping",
             "Kalmar SmartFleet data feed analysis",
@@ -536,19 +536,19 @@ const dict = {
             "Building 6-terminal single-screen dashboard",
             "Real-time KPI panel (container throughput, crane efficiency, berth occupancy)",
             "AI alert system \u2014 OPUS + TRASSIR + SmartFleet cross-reference",
-            "Automated shift report generation (replacing G\u00FCle\u00E7e)",
+            "Automated shift report generation (replacing GullsEye)",
             "Mobile responsive design (for field teams)",
           ],
         },
         {
           week: "Week 9-12",
-          title: "Automated Reporting & G\u00FCle\u00E7e Replacement",
+          title: "Automated Reporting & GullsEye Replacement",
           tasks: [
             "Daily/weekly/monthly automatic report generation module",
             "PDF and Excel export (compatible with existing formats)",
             "Email and Telegram notification integration",
             "Terminal-level and holding-level consolidated reports",
-            "Reporting infrastructure fully independent of G\u00FCle\u00E7e",
+            "Reporting infrastructure fully independent of GullsEye",
           ],
         },
         {
@@ -601,13 +601,13 @@ interface LangContextType {
 }
 
 const LangContext = createContext<LangContextType>({
-  lang: "en",
+  lang: "tr",
   setLang: () => {},
-  t: dict.en,
+  t: dict.tr,
 });
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
+  const [lang, setLangState] = useState<Lang>("tr");
 
   useEffect(() => {
     const saved = localStorage.getItem("safiport-lang") as Lang | null;
