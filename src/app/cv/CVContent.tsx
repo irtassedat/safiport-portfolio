@@ -22,88 +22,83 @@ export default function CVContent() {
         style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif" }}
       >
         {/* ══════════ HEADER ══════════ */}
-        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-sky-900 text-white px-7 pt-6 pb-5 print:px-7 print:pt-5 print:pb-4">
+        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-sky-900 text-white px-7 pt-5 pb-4 print:px-7 print:pt-4 print:pb-3">
           <div className="flex items-center gap-5">
             {/* Profile Photo */}
-            <div className="shrink-0">
+            <div className="shrink-0 relative">
               <img
                 src="https://github.com/irtassedat.png"
                 alt="Sedat İrtaş"
-                className="w-[72px] h-[72px] rounded-full border-2 border-sky-400/40 object-cover print:w-[65px] print:h-[65px]"
+                className="w-[74px] h-[74px] rounded-full border-[3px] border-sky-400/60 object-cover print:w-[68px] print:h-[68px]"
               />
+              <div className="absolute -bottom-0.5 -right-0.5 w-5 h-5 bg-emerald-500 rounded-full border-2 border-slate-900 flex items-center justify-center">
+                <svg className="w-2.5 h-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+              </div>
             </div>
 
-            {/* Name & Title */}
-            <div className="flex-1">
+            {/* Name & Contact */}
+            <div className="flex-1 min-w-0">
               <h1 className="text-[22px] font-bold tracking-tight leading-tight print:text-[20px]">
                 Ebrar Sedat İrtaş
               </h1>
               <p className="text-sky-300 text-[13px] font-semibold mt-0.5 print:text-[12px]">
                 Endüstri Mühendisi & Full-Stack AI Developer
               </p>
-              <div className="flex flex-wrap gap-x-4 gap-y-0.5 mt-2 text-[10px] text-gray-300 print:text-[9.5px]">
+              <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1.5 text-[9.5px] text-gray-300 print:text-[9px]">
                 <span className="flex items-center gap-1">
-                  <svg className="w-3 h-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                  <svg className="w-2.5 h-2.5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                   İzmit, Kocaeli
                 </span>
                 <span className="flex items-center gap-1">
-                  <svg className="w-3 h-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                  <svg className="w-2.5 h-2.5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                   +90 541 524 96 94
                 </span>
                 <span className="flex items-center gap-1">
-                  <svg className="w-3 h-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                  <svg className="w-2.5 h-2.5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                   sedatirtas.1@gmail.com
                 </span>
               </div>
             </div>
+          </div>
 
-            {/* Links — right side */}
-            <div className="text-right text-[10px] space-y-1 shrink-0 print:text-[9px]">
-              <a href="https://linkedin.com/in/sedatirtas" className="flex items-center justify-end gap-1.5 text-sky-300 hover:text-sky-200">
-                <span className="text-gray-500">LinkedIn</span>
-                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              </a>
-              <a href="https://github.com/irtassedat" className="flex items-center justify-end gap-1.5 text-sky-300 hover:text-sky-200">
-                <span className="text-gray-500">GitHub</span>
-                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-              <a href="https://safiport-portfolio.vercel.app" className="flex items-center justify-end gap-1.5 text-sky-300 hover:text-sky-200">
-                <span className="text-gray-500">Portfolyo</span>
-                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
-              </a>
-            </div>
+          {/* ── Link Buttons ── */}
+          <div className="flex flex-wrap gap-2 mt-3">
+            <LinkButton href="https://linkedin.com/in/sedatirtas" color="sky" icon="linkedin" label="LinkedIn" />
+            <LinkButton href="https://github.com/irtassedat" color="gray" icon="github" label="GitHub · 54 Repo" />
+            <LinkButton href="https://safiport-portfolio.vercel.app" color="orange" icon="globe" label="Portfolyo" />
+            <LinkButton href="https://safiport-portfolio.vercel.app/case-study" color="emerald" icon="doc" label="Case Study" />
           </div>
         </div>
 
         {/* ══════════ METRICS ══════════ */}
-        <div className="px-7 pt-4 pb-0 print:px-7 print:pt-3">
-          <div className="grid grid-cols-5 gap-2">
+        <div className="px-7 pt-3 pb-0 print:px-7 print:pt-2.5">
+          <div className="grid grid-cols-5 gap-1.5">
             {[
-              { num: "130K+", label: "Satır Production Kod", icon: "code" },
-              { num: "400+", label: "REST API Endpoint", icon: "api" },
-              { num: "100+", label: "Veritabanı Modeli", icon: "db" },
-              { num: "8", label: "7/24 Canlı Servis", icon: "server" },
-              { num: "6", label: "Otonom Ajan Sistemi", icon: "bot" },
+              { num: "130K+", label: "Satır Production Kod" },
+              { num: "400+", label: "REST API Endpoint" },
+              { num: "100+", label: "Veritabanı Modeli" },
+              { num: "8", label: "7/24 Canlı Servis" },
+              { num: "6", label: "Otonom Ajan Sistemi" },
             ].map((m) => (
-              <div key={m.label} className="text-center py-2 rounded-lg bg-gradient-to-b from-slate-50 to-white border border-slate-100 print:from-slate-50 print:to-white">
-                <div className="text-[15px] font-bold text-sky-700 print:text-[14px]">{m.num}</div>
-                <div className="text-[8px] text-slate-400 font-medium uppercase tracking-wide">{m.label}</div>
+              <div key={m.label} className="text-center py-1.5 rounded-lg bg-gradient-to-b from-slate-50 to-white border border-slate-100">
+                <div className="text-[14px] font-bold text-sky-700 print:text-[13px]">{m.num}</div>
+                <div className="text-[7.5px] text-slate-400 font-medium uppercase tracking-wide leading-tight">{m.label}</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* ══════════ BODY — TWO COLUMNS ══════════ */}
-        <div className="px-7 pt-4 pb-5 print:px-7 print:pt-3 print:pb-4">
-          <div className="grid grid-cols-[1fr_175px] gap-6 print:grid-cols-[1fr_168px] print:gap-5">
+        <div className="px-7 pt-3 pb-4 print:px-7 print:pt-2.5 print:pb-3">
+          <div className="grid grid-cols-[1fr_172px] gap-5 print:grid-cols-[1fr_165px] print:gap-4">
 
             {/* ▌LEFT COLUMN */}
-            <div className="space-y-3.5 print:space-y-3">
+            <div className="space-y-2.5 print:space-y-2">
 
               {/* PROFIL */}
               <section>
                 <SectionTitle icon="user">Profil</SectionTitle>
-                <p className="text-[10.5px] text-gray-600 leading-relaxed print:text-[10px]">
+                <p className="text-[10px] text-gray-600 leading-relaxed print:text-[9.5px]">
                   Endüstri Mühendisliği mezunu, son 2 yılda bağımsız olarak enterprise seviye production sistemler geliştirdim.
                   Linux VPS üzerinde Docker container&apos;larla 7/24 çalışan çok katmanlı mimariler kurup işletiyorum.
                   Endüstri mühendisliği altyapımla süreç optimizasyonu, kapasite planlama ve darboğaz analizini
@@ -115,32 +110,32 @@ export default function CVContent() {
               <section>
                 <SectionTitle icon="briefcase">Profesyonel Deneyim</SectionTitle>
 
-                <div className="mb-2.5 print:mb-2">
+                <div className="mb-2 print:mb-1.5">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-[11.5px] font-bold text-gray-900">Bağımsız Yazılım Mühendisi</h3>
-                      <p className="text-[9.5px] text-sky-600 font-semibold">Full-Stack Development · AI Otomasyon · DevOps</p>
+                      <h3 className="text-[11px] font-bold text-gray-900">Bağımsız Yazılım Mühendisi</h3>
+                      <p className="text-[9px] text-sky-600 font-semibold">Full-Stack Development · AI Otomasyon · DevOps</p>
                     </div>
                     <DateBadge>2024 – Günümüz</DateBadge>
                   </div>
-                  <ul className="mt-1.5 space-y-[3px]">
+                  <ul className="mt-1 space-y-[2px]">
                     <BulletItem>Fastify 5, Next.js 15-16, FastAPI, Spring Boot ile çok katmanlı RESTful API mimarileri tasarlayıp production&apos;a aldım</BulletItem>
                     <BulletItem>PostgreSQL 16, Redis 7, Prisma ORM ile yüksek performanslı veritabanı tasarımları; 100+ model, 70+ index, migration yönetimi</BulletItem>
                     <BulletItem>Claude API/SDK ve Gemini 2.0 Flash ile görüntü tanıma, doğal dil işleme ve otonom karar verme modülleri geliştirdim</BulletItem>
-                    <BulletItem>Docker Compose, Nginx reverse proxy, Cloudflare CDN, Tailscale VPN ile production altyapı yönetimi</BulletItem>
-                    <BulletItem>ML tabanlı güvenlik sistemleri: Isolation Forest anomali tespiti, adaptive intelligence scoring, fraud detection</BulletItem>
+                    <BulletItem>Docker Compose, Nginx reverse proxy, Cloudflare CDN, Tailscale VPN ile production altyapı kurulumu ve yönetimi</BulletItem>
+                    <BulletItem>ML tabanlı güvenlik: Isolation Forest anomali tespiti, adaptive intelligence scoring, fraud detection pipeline</BulletItem>
                   </ul>
                 </div>
 
                 <div>
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-[11.5px] font-bold text-gray-900">Prometeon Tyre Group, Kocaeli</h3>
-                      <p className="text-[9.5px] text-sky-600 font-semibold">Stajyer — Endüstri Mühendisi · Ar-Ge Departmanı</p>
+                      <h3 className="text-[11px] font-bold text-gray-900">Prometeon Tyre Group, Kocaeli</h3>
+                      <p className="text-[9px] text-sky-600 font-semibold">Stajyer — Endüstri Mühendisi · Ar-Ge Departmanı</p>
                     </div>
                     <DateBadge>2021</DateBadge>
                   </div>
-                  <ul className="mt-1.5 space-y-[3px]">
+                  <ul className="mt-1 space-y-[2px]">
                     <BulletItem>Ar-Ge finansal raporlama, makine test verisi analizi ve üst yönetime sunum hazırlama</BulletItem>
                   </ul>
                 </div>
@@ -149,7 +144,7 @@ export default function CVContent() {
               {/* PROJELER */}
               <section>
                 <SectionTitle icon="folder">Projeler</SectionTitle>
-                <div className="space-y-2 print:space-y-1.5">
+                <div className="space-y-1.5 print:space-y-1">
 
                   <ProjectItem
                     name="Gerçek Zamanlı Topluluk Platformu"
@@ -158,7 +153,7 @@ export default function CVContent() {
                     bullets={[
                       "164 REST endpoint, 29 Prisma modeli, JWT + Argon2 auth, 5 kademeli yetkilendirme",
                       "SSE gerçek zamanlı bildirim, gamifikasyon motoru, Claude AI chatbot entegrasyonu",
-                      "5 Docker container, Nginx, Cloudflare CDN — B2B gelir üreten platform, Yandex #1",
+                      "5 Docker container, Nginx, Cloudflare CDN — B2B gelir üreten canlı platform, Yandex #1",
                     ]}
                   />
 
@@ -177,7 +172,7 @@ export default function CVContent() {
                     lines="15.059"
                     stack="Python 3.11 · FastAPI · Gemini 2.0 Flash · Telethon · SQLite"
                     bullets={[
-                      "4 mikro servis mimarisi, Isolation Forest ile anomali tespiti, adaptive scoring, fraud detection",
+                      "4 mikro servis, Isolation Forest anomali tespiti, adaptive scoring, fraud detection",
                       "FastAPI admin dashboard (39 template), SSE monitoring, event bus, 31 tablo, 70+ index",
                     ]}
                   />
@@ -194,12 +189,12 @@ export default function CVContent() {
                   />
 
                   <ProjectItem
-                    name="E-Ticaret Platformu"
+                    name="E-Ticaret Platformu (Full-Stack)"
                     lines="—"
                     stack="React · Redux · Java Spring Boot · Spring Security · PostgreSQL"
                     github="github.com/irtassedat/ecommerce"
                     bullets={[
-                      "Full-stack: ürün katalog, sepet, ödeme frontend + RESTful backend API, stok/sipariş yönetimi",
+                      "Ürün katalog, sepet, ödeme frontend + RESTful backend API, JPA, stok/sipariş yönetimi",
                     ]}
                   />
                 </div>
@@ -207,24 +202,24 @@ export default function CVContent() {
             </div>
 
             {/* ▌RIGHT COLUMN */}
-            <div className="space-y-3 print:space-y-2.5">
+            <div className="space-y-2.5 print:space-y-2">
 
               {/* EĞİTİM */}
               <section>
                 <SectionTitle icon="graduation">Eğitim</SectionTitle>
-                <div className="space-y-2">
-                  <div className="pl-2.5 border-l-2 border-sky-200">
-                    <h3 className="text-[10.5px] font-bold text-gray-900">Süleyman Demirel Üni.</h3>
-                    <p className="text-[9.5px] text-sky-600 font-semibold">Endüstri Mühendisliği</p>
-                    <p className="text-[8.5px] text-gray-400">2017 – 2024</p>
-                    <p className="text-[8.5px] text-gray-500 mt-0.5 leading-snug">
+                <div className="space-y-1.5">
+                  <div className="pl-2 border-l-2 border-sky-300">
+                    <h3 className="text-[10px] font-bold text-gray-900">Süleyman Demirel Üni.</h3>
+                    <p className="text-[9px] text-sky-600 font-semibold">Endüstri Mühendisliği</p>
+                    <p className="text-[8px] text-gray-400">2017 – 2024</p>
+                    <p className="text-[8px] text-gray-500 mt-0.5 leading-snug">
                       Süreç optimizasyonu, kapasite planlama, kuyruk teorisi, yalın üretim, istatistiksel modelleme
                     </p>
                   </div>
-                  <div className="pl-2.5 border-l-2 border-sky-200">
-                    <h3 className="text-[10.5px] font-bold text-gray-900">Workintech</h3>
-                    <p className="text-[9.5px] text-sky-600 font-semibold">Full-Stack Web Dev.</p>
-                    <p className="text-[8.5px] text-gray-400">2023 – 2024 · 960 saat</p>
+                  <div className="pl-2 border-l-2 border-sky-300">
+                    <h3 className="text-[10px] font-bold text-gray-900">Workintech</h3>
+                    <p className="text-[9px] text-sky-600 font-semibold">Full-Stack Web Dev.</p>
+                    <p className="text-[8px] text-gray-400">2023 – 2024 · 960 saat · 78 proje</p>
                   </div>
                 </div>
               </section>
@@ -232,11 +227,11 @@ export default function CVContent() {
               {/* TEKNİK BECERİLER */}
               <section>
                 <SectionTitle icon="chip">Teknik Yetkinlikler</SectionTitle>
-                <div className="space-y-1.5">
+                <div className="space-y-1">
                   <SkillGroup label="Frontend" items={["React 19", "Next.js 16", "TypeScript", "Tailwind 4", "Framer Motion"]} />
                   <SkillGroup label="Backend" items={["Fastify 5", "Express", "FastAPI", "Spring Boot", "Prisma"]} />
                   <SkillGroup label="Veritabanı" items={["PostgreSQL 16", "Redis 7", "SQLite"]} />
-                  <SkillGroup label="AI & ML" items={["Claude API", "Gemini AI", "MCP", "Vision AI", "Otonom Ajanlar"]} />
+                  <SkillGroup label="AI & ML" items={["Claude API", "Gemini AI", "MCP", "Vision AI"]} />
                   <SkillGroup label="DevOps" items={["Docker", "Nginx", "Linux", "Cloudflare", "Vercel"]} />
                 </div>
               </section>
@@ -254,45 +249,43 @@ export default function CVContent() {
               {/* SERTİFİKALAR */}
               <section>
                 <SectionTitle icon="award">Sertifikalar</SectionTitle>
-                <div className="space-y-1">
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0" />
-                    <div>
-                      <p className="text-[9.5px] text-gray-700 font-medium">Front End Development</p>
-                      <p className="text-[8px] text-gray-400">Workintech · 2023</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0" />
-                    <div>
-                      <p className="text-[9.5px] text-gray-700 font-medium">Full Stack Development</p>
-                      <p className="text-[8px] text-gray-400">Workintech · 2024</p>
-                    </div>
-                  </div>
+                <div className="space-y-0.5">
+                  <CertItem name="Front End Development" org="Workintech · 2023" />
+                  <CertItem name="Full Stack Development" org="Workintech · 2024" />
                 </div>
               </section>
 
-              {/* NEDEN IE + DEV */}
+              {/* GELİŞTİRDİĞİM SİTELER */}
               <section>
-                <SectionTitle icon="puzzle">IE + Developer</SectionTitle>
-                <p className="text-[9px] text-gray-600 leading-snug print:text-[8.5px]">
-                  Endüstri mühendisliği süreçleri görmeyi ve darboğazları tespit etmeyi,
-                  yazılım geliştirme ise bunları ölçeklenebilir sistemlere dönüştürmeyi sağlıyor.
-                  Bu nadir kombinasyon, operasyonel verimliliği teknolojiyle buluşturan çözümler üretmemi mümkün kılıyor.
-                </p>
-              </section>
-
-              {/* WEB SİTELERİ */}
-              <section>
-                <SectionTitle icon="web">Geliştirdiğim Siteler</SectionTitle>
-                <div className="flex flex-wrap gap-1">
-                  {["crystal", "cw-enerji", "barut", "agt", "kaya", "turkerler", "sedat"].map((s) => (
-                    <span key={s} className="text-[7.5px] px-1.5 py-0.5 rounded bg-slate-50 text-slate-500 border border-slate-100 font-mono">
-                      {s}
-                    </span>
+                <SectionTitle icon="web">Kurumsal Web Siteleri</SectionTitle>
+                <div className="space-y-[3px]">
+                  {[
+                    { name: "crystal-portfolio", url: "crystal-portfolio-ecru.vercel.app" },
+                    { name: "cw-enerji-portfolio", url: "cw-enerji-portfolio.vercel.app" },
+                    { name: "barut-portfolio", url: "barut-portfolio.vercel.app" },
+                    { name: "agt-portfolio", url: "agt-portfolio.vercel.app" },
+                    { name: "kaya-portfolio", url: "kaya-portfolio.vercel.app" },
+                    { name: "turkerler-portfolio", url: "turkerler-portfolio.vercel.app" },
+                    { name: "sedat-portfolio", url: "sedat-portfolio-seven.vercel.app" },
+                  ].map((s) => (
+                    <a key={s.name} href={`https://${s.url}`} target="_blank" rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-[8px] text-sky-600 hover:text-sky-500 print:text-sky-700 group">
+                      <svg className="w-2 h-2 text-sky-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                      <span className="group-hover:underline print:underline font-mono truncate">{s.name}</span>
+                    </a>
                   ))}
                 </div>
-                <p className="text-[8px] text-gray-400 mt-1">7 kurumsal/portfolyo sitesi · Next.js · Vercel</p>
+                <p className="text-[7.5px] text-gray-400 mt-1">Next.js · TypeScript · Tailwind · Vercel</p>
+              </section>
+
+              {/* IE + DEV */}
+              <section>
+                <SectionTitle icon="puzzle">IE + Developer</SectionTitle>
+                <p className="text-[8.5px] text-gray-600 leading-snug print:text-[8px]">
+                  Endüstri mühendisliği süreçleri analiz etmeyi ve darboğazları tespit etmeyi,
+                  yazılım ise bunları ölçeklenebilir sistemlere dönüştürmeyi sağlıyor.
+                  Bu nadir kombinasyon, operasyonel verimliliği teknolojiyle buluşturan çözümler üretmemi mümkün kılıyor.
+                </p>
               </section>
             </div>
           </div>
@@ -322,6 +315,35 @@ export default function CVContent() {
 
 /* ════════════ SUB-COMPONENTS ════════════ */
 
+function LinkButton({ href, color, icon, label }: { href: string; color: string; icon: string; label: string }) {
+  const colors: Record<string, string> = {
+    sky: "bg-sky-500/20 text-sky-200 border-sky-400/30 hover:bg-sky-500/30",
+    gray: "bg-white/10 text-gray-200 border-white/20 hover:bg-white/20",
+    orange: "bg-orange-500/20 text-orange-200 border-orange-400/30 hover:bg-orange-500/30",
+    emerald: "bg-emerald-500/20 text-emerald-200 border-emerald-400/30 hover:bg-emerald-500/30",
+  };
+
+  const icons: Record<string, React.ReactNode> = {
+    linkedin: <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>,
+    github: <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>,
+    globe: <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>,
+    doc: <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>,
+  };
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] font-semibold border transition-colors print:px-2 print:py-0.5 print:text-[8.5px] ${colors[color]}`}
+    >
+      {icons[icon]}
+      {label}
+      <svg className="w-2 h-2 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+    </a>
+  );
+}
+
 function SectionTitle({ children, icon }: { children: React.ReactNode; icon: string }) {
   const icons: Record<string, React.ReactNode> = {
     user: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />,
@@ -336,8 +358,8 @@ function SectionTitle({ children, icon }: { children: React.ReactNode; icon: str
   };
 
   return (
-    <h2 className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-wider border-b border-slate-200 pb-1 mb-2 print:text-[9.5px] print:mb-1.5">
-      <svg className="w-3 h-3 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">{icons[icon]}</svg>
+    <h2 className="flex items-center gap-1.5 text-[9.5px] font-bold text-slate-700 uppercase tracking-wider border-b border-slate-200 pb-0.5 mb-1.5 print:text-[9px] print:mb-1">
+      <svg className="w-3 h-3 text-sky-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">{icons[icon]}</svg>
       {children}
     </h2>
   );
@@ -345,7 +367,7 @@ function SectionTitle({ children, icon }: { children: React.ReactNode; icon: str
 
 function DateBadge({ children }: { children: React.ReactNode }) {
   return (
-    <span className="text-[8.5px] text-sky-600 font-semibold bg-sky-50 px-2 py-0.5 rounded-full whitespace-nowrap border border-sky-100 print:bg-sky-50">
+    <span className="text-[8px] text-sky-600 font-semibold bg-sky-50 px-2 py-0.5 rounded-full whitespace-nowrap border border-sky-100">
       {children}
     </span>
   );
@@ -353,8 +375,8 @@ function DateBadge({ children }: { children: React.ReactNode }) {
 
 function BulletItem({ children }: { children: React.ReactNode }) {
   return (
-    <li className="flex items-start gap-1.5 text-[10px] text-gray-600 leading-snug print:text-[9.5px]">
-      <span className="w-1 h-1 rounded-full bg-sky-400 mt-[5px] shrink-0" />
+    <li className="flex items-start gap-1.5 text-[9.5px] text-gray-600 leading-snug print:text-[9px]">
+      <span className="w-1 h-1 rounded-full bg-sky-400 mt-[4px] shrink-0" />
       <span>{children}</span>
     </li>
   );
@@ -368,25 +390,29 @@ function ProjectItem({
   return (
     <div>
       <div className="flex items-center gap-1.5 flex-wrap">
-        <h3 className="text-[11px] font-bold text-gray-900 print:text-[10.5px]">{name}</h3>
+        <h3 className="text-[10.5px] font-bold text-gray-900 print:text-[10px]">{name}</h3>
         {lines !== "—" && (
-          <span className="text-[7.5px] font-mono text-sky-600 bg-sky-50 px-1.5 py-[1px] rounded border border-sky-100 print:bg-sky-50">
+          <span className="text-[7px] font-mono text-sky-600 bg-sky-50 px-1.5 py-[1px] rounded border border-sky-100">
             {lines} satır
           </span>
         )}
         {github && (
-          <a href={`https://${github}`} className="text-[7.5px] font-mono text-gray-400 hover:text-sky-500 print:text-gray-400">
-            GitHub ↗
+          <a href={`https://${github}`} target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-0.5 text-[7.5px] font-semibold text-white bg-gray-800 hover:bg-gray-700 px-1.5 py-[1px] rounded print:text-gray-800 print:bg-gray-100">
+            <svg className="w-2 h-2" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
           </a>
         )}
         {live && (
-          <a href={`https://${live}`} className="text-[7.5px] font-mono text-emerald-500 hover:text-emerald-400 print:text-emerald-500">
-            Live ↗
+          <a href={`https://${live}`} target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-0.5 text-[7.5px] font-semibold text-white bg-emerald-600 hover:bg-emerald-500 px-1.5 py-[1px] rounded print:text-emerald-700 print:bg-emerald-50">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse" />
+            Canlı Demo
           </a>
         )}
       </div>
-      <p className="text-[8.5px] text-gray-400 font-mono mt-0.5">{stack}</p>
-      <ul className="mt-1 space-y-[2px]">
+      <p className="text-[8px] text-gray-400 font-mono mt-0.5">{stack}</p>
+      <ul className="mt-0.5 space-y-[1px]">
         {bullets.map((b, i) => (
           <BulletItem key={i}>{b}</BulletItem>
         ))}
@@ -398,10 +424,10 @@ function ProjectItem({
 function SkillGroup({ label, items }: { label: string; items: string[] }) {
   return (
     <div>
-      <span className="text-[8.5px] font-bold text-slate-600 uppercase tracking-wide">{label}</span>
+      <span className="text-[8px] font-bold text-slate-600 uppercase tracking-wide">{label}</span>
       <div className="flex flex-wrap gap-0.5 mt-0.5">
         {items.map((item) => (
-          <span key={item} className="text-[8px] px-1.5 py-[1px] rounded bg-slate-50 text-slate-600 border border-slate-100 print:bg-slate-50">
+          <span key={item} className="text-[7.5px] px-1.5 py-[1px] rounded bg-slate-50 text-slate-600 border border-slate-100">
             {item}
           </span>
         ))}
@@ -414,11 +440,23 @@ function LangItem({ lang, level, pct }: { lang: string; level: string; pct: numb
   return (
     <div>
       <div className="flex items-center justify-between mb-0.5">
-        <span className="text-[9.5px] text-gray-700 font-medium">{lang}</span>
-        <span className="text-[8px] text-gray-400">{level}</span>
+        <span className="text-[9px] text-gray-700 font-medium">{lang}</span>
+        <span className="text-[7.5px] text-gray-400">{level}</span>
       </div>
       <div className="h-1 bg-gray-100 rounded-full overflow-hidden">
-        <div className="h-full bg-sky-400 rounded-full" style={{ width: `${pct}%` }} />
+        <div className="h-full bg-gradient-to-r from-sky-400 to-sky-500 rounded-full" style={{ width: `${pct}%` }} />
+      </div>
+    </div>
+  );
+}
+
+function CertItem({ name, org }: { name: string; org: string }) {
+  return (
+    <div className="flex items-center gap-1.5">
+      <div className="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0" />
+      <div>
+        <p className="text-[9px] text-gray-700 font-medium">{name}</p>
+        <p className="text-[7.5px] text-gray-400">{org}</p>
       </div>
     </div>
   );
