@@ -1,13 +1,9 @@
 "use client";
 
-import { useRef } from "react";
-
 export default function CVContent() {
-  const cvRef = useRef<HTMLDivElement>(null);
-
   return (
     <div className="min-h-screen bg-gray-100 print:bg-white">
-      {/* Print Button — hidden on print */}
+      {/* Print Button */}
       <div className="print:hidden fixed top-4 right-4 z-50 flex gap-3">
         <button
           onClick={() => window.print()}
@@ -15,268 +11,288 @@ export default function CVContent() {
         >
           PDF Olarak İndir
         </button>
-        <a
-          href="/"
-          className="px-5 py-2.5 bg-gray-800 text-white text-sm font-medium rounded-lg hover:bg-gray-900 transition-colors shadow-lg"
-        >
+        <a href="/" className="px-5 py-2.5 bg-gray-800 text-white text-sm font-medium rounded-lg hover:bg-gray-900 transition-colors shadow-lg">
           Portfolyoya Dön
         </a>
       </div>
 
-      {/* CV Container — A4 optimized */}
+      {/* A4 Container */}
       <div
-        ref={cvRef}
         className="max-w-[210mm] mx-auto bg-white shadow-2xl print:shadow-none print:m-0 print:max-w-none"
         style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif" }}
       >
-        {/* =================== HEADER =================== */}
-        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-sky-900 text-white px-8 pt-7 pb-5 print:px-8 print:pt-6 print:pb-4">
-          <div className="flex items-start justify-between">
-            <div>
-              <h1 className="text-2xl font-bold tracking-tight print:text-2xl">
+        {/* ══════════ HEADER ══════════ */}
+        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-sky-900 text-white px-7 pt-6 pb-5 print:px-7 print:pt-5 print:pb-4">
+          <div className="flex items-center gap-5">
+            {/* Profile Photo */}
+            <div className="shrink-0">
+              <img
+                src="https://github.com/irtassedat.png"
+                alt="Sedat İrtaş"
+                className="w-[72px] h-[72px] rounded-full border-2 border-sky-400/40 object-cover print:w-[65px] print:h-[65px]"
+              />
+            </div>
+
+            {/* Name & Title */}
+            <div className="flex-1">
+              <h1 className="text-[22px] font-bold tracking-tight leading-tight print:text-[20px]">
                 Ebrar Sedat İrtaş
               </h1>
-              <p className="text-sky-300 text-sm font-medium mt-0.5 print:text-xs">
+              <p className="text-sky-300 text-[13px] font-semibold mt-0.5 print:text-[12px]">
                 Endüstri Mühendisi & Full-Stack AI Developer
               </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-0.5 mt-2 text-[10px] text-gray-300 print:text-[9.5px]">
+                <span className="flex items-center gap-1">
+                  <svg className="w-3 h-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                  İzmit, Kocaeli
+                </span>
+                <span className="flex items-center gap-1">
+                  <svg className="w-3 h-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                  +90 541 524 96 94
+                </span>
+                <span className="flex items-center gap-1">
+                  <svg className="w-3 h-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                  sedatirtas.1@gmail.com
+                </span>
+              </div>
             </div>
-            <div className="text-right text-[11px] text-gray-300 space-y-0.5 print:text-[10px]">
-              <p>İzmit, Kocaeli</p>
-              <p>+90 541 524 96 94</p>
-              <p>sedatirtas.1@gmail.com</p>
-            </div>
-          </div>
 
-          {/* Links */}
-          <div className="flex gap-4 mt-3 text-[11px] print:text-[10px]">
-            <span className="text-gray-400">
-              <span className="text-gray-500">LinkedIn:</span>{" "}
-              <span className="text-sky-300">linkedin.com/in/sedatirtas</span>
-            </span>
-            <span className="text-gray-400">
-              <span className="text-gray-500">GitHub:</span>{" "}
-              <span className="text-sky-300">github.com/irtassedat</span>
-            </span>
-            <span className="text-gray-400">
-              <span className="text-gray-500">Portfolyo:</span>{" "}
-              <span className="text-sky-300">safiport-portfolio.vercel.app</span>
-            </span>
+            {/* Links — right side */}
+            <div className="text-right text-[10px] space-y-1 shrink-0 print:text-[9px]">
+              <a href="https://linkedin.com/in/sedatirtas" className="flex items-center justify-end gap-1.5 text-sky-300 hover:text-sky-200">
+                <span className="text-gray-500">LinkedIn</span>
+                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://github.com/irtassedat" className="flex items-center justify-end gap-1.5 text-sky-300 hover:text-sky-200">
+                <span className="text-gray-500">GitHub</span>
+                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://safiport-portfolio.vercel.app" className="flex items-center justify-end gap-1.5 text-sky-300 hover:text-sky-200">
+                <span className="text-gray-500">Portfolyo</span>
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* =================== BODY =================== */}
-        <div className="px-8 py-5 print:px-8 print:py-4">
+        {/* ══════════ METRICS ══════════ */}
+        <div className="px-7 pt-4 pb-0 print:px-7 print:pt-3">
+          <div className="grid grid-cols-5 gap-2">
+            {[
+              { num: "130K+", label: "Satır Production Kod", icon: "code" },
+              { num: "400+", label: "REST API Endpoint", icon: "api" },
+              { num: "100+", label: "Veritabanı Modeli", icon: "db" },
+              { num: "8", label: "7/24 Canlı Servis", icon: "server" },
+              { num: "6", label: "Otonom Ajan Sistemi", icon: "bot" },
+            ].map((m) => (
+              <div key={m.label} className="text-center py-2 rounded-lg bg-gradient-to-b from-slate-50 to-white border border-slate-100 print:from-slate-50 print:to-white">
+                <div className="text-[15px] font-bold text-sky-700 print:text-[14px]">{m.num}</div>
+                <div className="text-[8px] text-slate-400 font-medium uppercase tracking-wide">{m.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
 
-          {/* PROFIL */}
-          <section className="mb-5 print:mb-4">
-            <p className="text-[11.5px] text-gray-700 leading-relaxed print:text-[11px] print:leading-relaxed">
-              Endüstri Mühendisliği mezunu. Mezuniyet sonrası 2 yılda bağımsız olarak{" "}
-              <strong>130.000+ satır production kod</strong> yazdım — 8 servis 7/24 canlı çalışıyor.
-              Otonom ajan sistemleri, gerçek zamanlı dashboard&apos;lar, AI entegrasyonları ve çok modüllü
-              platform mimarileri geliştirdim. Endüstri mühendisliği altyapım sayesinde sadece kod
-              yazmıyorum; iş süreçlerini analiz edip, darboğazları tespit edip, ölçülebilir çözümler
-              üretiyorum.
-            </p>
-          </section>
+        {/* ══════════ BODY — TWO COLUMNS ══════════ */}
+        <div className="px-7 pt-4 pb-5 print:px-7 print:pt-3 print:pb-4">
+          <div className="grid grid-cols-[1fr_175px] gap-6 print:grid-cols-[1fr_168px] print:gap-5">
 
-          {/* METRICS BAR */}
-          <section className="mb-5 print:mb-4">
-            <div className="grid grid-cols-5 gap-2">
-              {[
-                { num: "130K+", label: "Satır Kod" },
-                { num: "400+", label: "API Endpoint" },
-                { num: "100+", label: "DB Modeli" },
-                { num: "8", label: "Canlı Servis" },
-                { num: "6", label: "Otonom Ajan" },
-              ].map((m) => (
-                <div key={m.label} className="text-center py-2 rounded bg-slate-50 border border-slate-100 print:bg-slate-50">
-                  <div className="text-base font-bold text-slate-800 print:text-sm">{m.num}</div>
-                  <div className="text-[9px] text-slate-500 font-medium">{m.label}</div>
-                </div>
-              ))}
-            </div>
-          </section>
+            {/* ▌LEFT COLUMN */}
+            <div className="space-y-3.5 print:space-y-3">
 
-          {/* TWO COLUMN LAYOUT */}
-          <div className="grid grid-cols-[1fr_180px] gap-6 print:grid-cols-[1fr_170px] print:gap-5">
-
-            {/* LEFT COLUMN */}
-            <div className="space-y-4 print:space-y-3">
-
-              {/* DENEYIM */}
+              {/* PROFIL */}
               <section>
-                <SectionTitle>Deneyim</SectionTitle>
+                <SectionTitle icon="user">Profil</SectionTitle>
+                <p className="text-[10.5px] text-gray-600 leading-relaxed print:text-[10px]">
+                  Endüstri Mühendisliği mezunu, son 2 yılda bağımsız olarak enterprise seviye production sistemler geliştirdim.
+                  Linux VPS üzerinde Docker container&apos;larla 7/24 çalışan çok katmanlı mimariler kurup işletiyorum.
+                  Endüstri mühendisliği altyapımla süreç optimizasyonu, kapasite planlama ve darboğaz analizini
+                  yazılım çözümlerine dönüştürebiliyorum.
+                </p>
+              </section>
 
-                <div className="mb-3 print:mb-2.5">
+              {/* DENEYİM */}
+              <section>
+                <SectionTitle icon="briefcase">Profesyonel Deneyim</SectionTitle>
+
+                <div className="mb-2.5 print:mb-2">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-[12px] font-bold text-gray-900 print:text-[11.5px]">
-                        Bağımsız Yazılım Geliştirici
-                      </h3>
-                      <p className="text-[10px] text-sky-600 font-medium">Full-Stack & AI Otomasyon</p>
+                      <h3 className="text-[11.5px] font-bold text-gray-900">Bağımsız Yazılım Mühendisi</h3>
+                      <p className="text-[9.5px] text-sky-600 font-semibold">Full-Stack Development · AI Otomasyon · DevOps</p>
                     </div>
-                    <span className="text-[10px] text-gray-400 font-medium whitespace-nowrap">
-                      2024 – Günümüz
-                    </span>
+                    <DateBadge>2024 – Günümüz</DateBadge>
                   </div>
-                  <ul className="mt-1.5 space-y-0.5">
-                    <BulletItem>Linux VPS üzerinde 8 Docker container ile 7/24 production sistemleri yönetiyorum (PostgreSQL, Redis, Nginx, uygulama servisleri)</BulletItem>
-                    <BulletItem>6 otonom ajan sistemi kurdum — ödeme doğrulama, envanter takibi, bildirim, workflow yönetimi, fraud detection</BulletItem>
-                    <BulletItem>AI API entegrasyonları (Claude, Gemini) ile akıllı otomasyon ve vision sistemleri geliştirdim</BulletItem>
-                    <BulletItem>7 kurumsal ve portfolyo web sitesi geliştirip canlıya aldım</BulletItem>
-                    <BulletItem>SEO optimizasyonu ile Yandex&apos;te organik #1 sıralama, B2B gelir üreten platform</BulletItem>
+                  <ul className="mt-1.5 space-y-[3px]">
+                    <BulletItem>Fastify 5, Next.js 15-16, FastAPI, Spring Boot ile çok katmanlı RESTful API mimarileri tasarlayıp production&apos;a aldım</BulletItem>
+                    <BulletItem>PostgreSQL 16, Redis 7, Prisma ORM ile yüksek performanslı veritabanı tasarımları; 100+ model, 70+ index, migration yönetimi</BulletItem>
+                    <BulletItem>Claude API/SDK ve Gemini 2.0 Flash ile görüntü tanıma, doğal dil işleme ve otonom karar verme modülleri geliştirdim</BulletItem>
+                    <BulletItem>Docker Compose, Nginx reverse proxy, Cloudflare CDN, Tailscale VPN ile production altyapı yönetimi</BulletItem>
+                    <BulletItem>ML tabanlı güvenlik sistemleri: Isolation Forest anomali tespiti, adaptive intelligence scoring, fraud detection</BulletItem>
                   </ul>
                 </div>
 
                 <div>
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-[12px] font-bold text-gray-900 print:text-[11.5px]">
-                        Prometeon Tyre Group, Kocaeli
-                      </h3>
-                      <p className="text-[10px] text-sky-600 font-medium">Stajyer — Endüstri Mühendisi (Ar-Ge)</p>
+                      <h3 className="text-[11.5px] font-bold text-gray-900">Prometeon Tyre Group, Kocaeli</h3>
+                      <p className="text-[9.5px] text-sky-600 font-semibold">Stajyer — Endüstri Mühendisi · Ar-Ge Departmanı</p>
                     </div>
-                    <span className="text-[10px] text-gray-400 font-medium">2021</span>
+                    <DateBadge>2021</DateBadge>
                   </div>
-                  <ul className="mt-1.5 space-y-0.5">
-                    <BulletItem>Ar-Ge departmanında finansal rapor hazırlama, makine test verilerinin analizi ve yönetime raporlama</BulletItem>
+                  <ul className="mt-1.5 space-y-[3px]">
+                    <BulletItem>Ar-Ge finansal raporlama, makine test verisi analizi ve üst yönetime sunum hazırlama</BulletItem>
                   </ul>
                 </div>
               </section>
 
               {/* PROJELER */}
               <section>
-                <SectionTitle>Öne Çıkan Projeler</SectionTitle>
+                <SectionTitle icon="folder">Projeler</SectionTitle>
+                <div className="space-y-2 print:space-y-1.5">
 
-                <div className="space-y-2.5 print:space-y-2">
                   <ProjectItem
                     name="Gerçek Zamanlı Topluluk Platformu"
-                    lines="64.900 satır"
-                    stack="Fastify 5 · Next.js 15 · React 19 · PostgreSQL 16 · Redis 7 · Python"
+                    lines="64.900"
+                    stack="Fastify 5 · Next.js 15 · React 19 · PostgreSQL 16 · Redis 7 · Python · Docker"
                     bullets={[
-                      "164 API endpoint, 29 veritabanı modeli, JWT + Argon2 kimlik doğrulama",
-                      "80+ React bileşeni, Python Telegram bot, Claude AI entegrasyonu",
-                      "5 Docker container ile 7/24 çalışıyor, B2B gelir üretiyor, Yandex #1",
+                      "164 REST endpoint, 29 Prisma modeli, JWT + Argon2 auth, 5 kademeli yetkilendirme",
+                      "SSE gerçek zamanlı bildirim, gamifikasyon motoru, Claude AI chatbot entegrasyonu",
+                      "5 Docker container, Nginx, Cloudflare CDN — B2B gelir üreten platform, Yandex #1",
                     ]}
                   />
 
                   <ProjectItem
                     name="Akıllı Lojistik & Ödeme Platformu"
-                    lines="34.600 satır"
-                    stack="pnpm Monorepo · Fastify · React · Grammy · Prisma · Docker"
+                    lines="34.600"
+                    stack="pnpm Monorepo · Fastify · React · Grammy Bot · Prisma · Docker Compose"
                     bullets={[
-                      "6 otonom ajan: Payment, Order, Inventory, Notification, Signal, Workflow",
-                      "25 Prisma modeli, multi-chain ödeme altyapısı, 7 Docker servisi",
+                      "6 otonom ajan mimarisi: Payment, Order, Inventory, Notification, Signal, Workflow + DLQ Retry",
+                      "HD Wallet (BIP32/39/44), multi-chain ödeme, coğrafi sorgulama, 72 saat anlaşmazlık sistemi",
                     ]}
                   />
 
                   <ProjectItem
                     name="Çok Modüllü Bot & AI Ekosistemi"
-                    lines="15.059 satır"
-                    stack="Python 3.11 · FastAPI · Gemini AI · Telegram Bot API · SQLite"
+                    lines="15.059"
+                    stack="Python 3.11 · FastAPI · Gemini 2.0 Flash · Telethon · SQLite"
                     bullets={[
-                      "4 mikro servis, ML güvenlik (Isolation Forest, fraud detection)",
-                      "FastAPI admin dashboard, SSE real-time monitoring, 31 tablo, 70+ index",
+                      "4 mikro servis mimarisi, Isolation Forest ile anomali tespiti, adaptive scoring, fraud detection",
+                      "FastAPI admin dashboard (39 template), SSE monitoring, event bus, 31 tablo, 70+ index",
                     ]}
                   />
 
                   <ProjectItem
                     name="QR Menü SaaS Platformu"
-                    lines="12.685 satır"
+                    lines="12.685"
                     stack="Node.js · Express · PostgreSQL · JWT · bcrypt"
+                    github="github.com/irtassedat/qrmenu"
+                    live="qr.sebastianlogic.com"
                     bullets={[
-                      "184 API endpoint, 46 tablo, 5 kademeli RBAC, çoklu şube yönetimi",
-                      "Sadakat programı, SMS OTP, tema motoru — Canlı: qr.sebastianlogic.com",
+                      "184 endpoint, 46 tablo, 5 kademeli RBAC, çoklu şube, sadakat programı (4 tier), SMS OTP",
+                    ]}
+                  />
+
+                  <ProjectItem
+                    name="E-Ticaret Platformu"
+                    lines="—"
+                    stack="React · Redux · Java Spring Boot · Spring Security · PostgreSQL"
+                    github="github.com/irtassedat/ecommerce"
+                    bullets={[
+                      "Full-stack: ürün katalog, sepet, ödeme frontend + RESTful backend API, stok/sipariş yönetimi",
                     ]}
                   />
                 </div>
               </section>
             </div>
 
-            {/* RIGHT COLUMN */}
-            <div className="space-y-4 print:space-y-3">
+            {/* ▌RIGHT COLUMN */}
+            <div className="space-y-3 print:space-y-2.5">
 
               {/* EĞİTİM */}
               <section>
-                <SectionTitle>Eğitim</SectionTitle>
-
-                <div className="mb-2">
-                  <h3 className="text-[11px] font-bold text-gray-900 print:text-[10.5px]">
-                    Süleyman Demirel Üni.
-                  </h3>
-                  <p className="text-[10px] text-sky-600 font-medium">Endüstri Mühendisliği</p>
-                  <p className="text-[9px] text-gray-400">2017 – 2024</p>
-                  <p className="text-[9px] text-gray-500 mt-0.5 leading-snug">
-                    Süreç optimizasyonu, kapasite planlama, kuyruk teorisi, istatistiksel modelleme, yalın üretim
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-[11px] font-bold text-gray-900 print:text-[10.5px]">
-                    Workintech
-                  </h3>
-                  <p className="text-[10px] text-sky-600 font-medium">Full-Stack Web Dev.</p>
-                  <p className="text-[9px] text-gray-400">2023 – 2024</p>
-                  <p className="text-[9px] text-gray-500 mt-0.5">960 saat · 78 proje</p>
+                <SectionTitle icon="graduation">Eğitim</SectionTitle>
+                <div className="space-y-2">
+                  <div className="pl-2.5 border-l-2 border-sky-200">
+                    <h3 className="text-[10.5px] font-bold text-gray-900">Süleyman Demirel Üni.</h3>
+                    <p className="text-[9.5px] text-sky-600 font-semibold">Endüstri Mühendisliği</p>
+                    <p className="text-[8.5px] text-gray-400">2017 – 2024</p>
+                    <p className="text-[8.5px] text-gray-500 mt-0.5 leading-snug">
+                      Süreç optimizasyonu, kapasite planlama, kuyruk teorisi, yalın üretim, istatistiksel modelleme
+                    </p>
+                  </div>
+                  <div className="pl-2.5 border-l-2 border-sky-200">
+                    <h3 className="text-[10.5px] font-bold text-gray-900">Workintech</h3>
+                    <p className="text-[9.5px] text-sky-600 font-semibold">Full-Stack Web Dev.</p>
+                    <p className="text-[8.5px] text-gray-400">2023 – 2024 · 960 saat</p>
+                  </div>
                 </div>
               </section>
 
               {/* TEKNİK BECERİLER */}
               <section>
-                <SectionTitle>Teknik Beceriler</SectionTitle>
+                <SectionTitle icon="chip">Teknik Yetkinlikler</SectionTitle>
                 <div className="space-y-1.5">
-                  <SkillGroup label="Frontend" items="React 19, Next.js 16, TypeScript, Tailwind 4, Framer Motion" />
-                  <SkillGroup label="Backend" items="Node.js (Fastify, Express), Python (FastAPI), Java/Spring Boot" />
-                  <SkillGroup label="Veritabanı" items="PostgreSQL 16, Redis 7, SQLite, Prisma ORM" />
-                  <SkillGroup label="AI" items="Claude API/SDK, Gemini AI, MCP, Vision AI, Otonom Ajanlar" />
-                  <SkillGroup label="DevOps" items="Docker, Nginx, Linux, Cloudflare, Vercel, VPS" />
-                  <SkillGroup label="Entegrasyon" items="REST API, Telegram Bot, Telethon, Grammy, Webhook" />
+                  <SkillGroup label="Frontend" items={["React 19", "Next.js 16", "TypeScript", "Tailwind 4", "Framer Motion"]} />
+                  <SkillGroup label="Backend" items={["Fastify 5", "Express", "FastAPI", "Spring Boot", "Prisma"]} />
+                  <SkillGroup label="Veritabanı" items={["PostgreSQL 16", "Redis 7", "SQLite"]} />
+                  <SkillGroup label="AI & ML" items={["Claude API", "Gemini AI", "MCP", "Vision AI", "Otonom Ajanlar"]} />
+                  <SkillGroup label="DevOps" items={["Docker", "Nginx", "Linux", "Cloudflare", "Vercel"]} />
                 </div>
               </section>
 
               {/* DİLLER */}
               <section>
-                <SectionTitle>Diller</SectionTitle>
+                <SectionTitle icon="globe">Diller</SectionTitle>
                 <div className="space-y-1">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] text-gray-700">Türkçe</span>
-                    <span className="text-[9px] text-gray-400">Anadil</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] text-gray-700">İngilizce</span>
-                    <span className="text-[9px] text-gray-400">İleri (B2-C1)</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] text-gray-700">Almanca</span>
-                    <span className="text-[9px] text-gray-400">Başlangıç (A1)</span>
-                  </div>
+                  <LangItem lang="Türkçe" level="Anadil" pct={100} />
+                  <LangItem lang="İngilizce" level="İleri (B2-C1)" pct={75} />
+                  <LangItem lang="Almanca" level="Başlangıç (A1)" pct={15} />
                 </div>
               </section>
 
               {/* SERTİFİKALAR */}
               <section>
-                <SectionTitle>Sertifikalar</SectionTitle>
+                <SectionTitle icon="award">Sertifikalar</SectionTitle>
                 <div className="space-y-1">
-                  <div>
-                    <p className="text-[10px] text-gray-700 font-medium">Front End Development</p>
-                    <p className="text-[9px] text-gray-400">Workintech · 2023</p>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0" />
+                    <div>
+                      <p className="text-[9.5px] text-gray-700 font-medium">Front End Development</p>
+                      <p className="text-[8px] text-gray-400">Workintech · 2023</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-[10px] text-gray-700 font-medium">Full Stack Development</p>
-                    <p className="text-[9px] text-gray-400">Workintech · 2024</p>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0" />
+                    <div>
+                      <p className="text-[9.5px] text-gray-700 font-medium">Full Stack Development</p>
+                      <p className="text-[8px] text-gray-400">Workintech · 2024</p>
+                    </div>
                   </div>
                 </div>
               </section>
 
-              {/* IE + DEV */}
+              {/* NEDEN IE + DEV */}
               <section>
-                <SectionTitle>Neden IE + Dev?</SectionTitle>
-                <p className="text-[9.5px] text-gray-600 leading-snug print:text-[9px]">
-                  Endüstri mühendisliği bana süreçleri görmekten darboğazları bulmayı,
-                  yazılım da bunları çözen sistemleri kurmayı verdi.
-                  Bu kombinasyon operasyonel verimliliği
-                  yazılımla ölçeklendirebilen çözümler üretmemi sağlıyor.
+                <SectionTitle icon="puzzle">IE + Developer</SectionTitle>
+                <p className="text-[9px] text-gray-600 leading-snug print:text-[8.5px]">
+                  Endüstri mühendisliği süreçleri görmeyi ve darboğazları tespit etmeyi,
+                  yazılım geliştirme ise bunları ölçeklenebilir sistemlere dönüştürmeyi sağlıyor.
+                  Bu nadir kombinasyon, operasyonel verimliliği teknolojiyle buluşturan çözümler üretmemi mümkün kılıyor.
                 </p>
+              </section>
+
+              {/* WEB SİTELERİ */}
+              <section>
+                <SectionTitle icon="web">Geliştirdiğim Siteler</SectionTitle>
+                <div className="flex flex-wrap gap-1">
+                  {["crystal", "cw-enerji", "barut", "agt", "kaya", "turkerler", "sedat"].map((s) => (
+                    <span key={s} className="text-[7.5px] px-1.5 py-0.5 rounded bg-slate-50 text-slate-500 border border-slate-100 font-mono">
+                      {s}
+                    </span>
+                  ))}
+                </div>
+                <p className="text-[8px] text-gray-400 mt-1">7 kurumsal/portfolyo sitesi · Next.js · Vercel</p>
               </section>
             </div>
           </div>
@@ -304,46 +320,73 @@ export default function CVContent() {
   );
 }
 
-/* ========== SUB-COMPONENTS ========== */
+/* ════════════ SUB-COMPONENTS ════════════ */
 
-function SectionTitle({ children }: { children: React.ReactNode }) {
+function SectionTitle({ children, icon }: { children: React.ReactNode; icon: string }) {
+  const icons: Record<string, React.ReactNode> = {
+    user: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />,
+    briefcase: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.193 23.193 0 0112 15c-3.183 0-6.22-.64-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />,
+    folder: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />,
+    graduation: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />,
+    chip: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />,
+    globe: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />,
+    award: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />,
+    puzzle: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />,
+    web: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />,
+  };
+
   return (
-    <h2 className="text-[11px] font-bold text-slate-800 uppercase tracking-wider border-b border-slate-200 pb-1 mb-2 print:text-[10px] print:mb-1.5">
+    <h2 className="flex items-center gap-1.5 text-[10px] font-bold text-slate-700 uppercase tracking-wider border-b border-slate-200 pb-1 mb-2 print:text-[9.5px] print:mb-1.5">
+      <svg className="w-3 h-3 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">{icons[icon]}</svg>
       {children}
     </h2>
   );
 }
 
+function DateBadge({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="text-[8.5px] text-sky-600 font-semibold bg-sky-50 px-2 py-0.5 rounded-full whitespace-nowrap border border-sky-100 print:bg-sky-50">
+      {children}
+    </span>
+  );
+}
+
 function BulletItem({ children }: { children: React.ReactNode }) {
   return (
-    <li className="flex items-start gap-1.5 text-[10.5px] text-gray-600 leading-snug print:text-[10px]">
-      <span className="w-1 h-1 rounded-full bg-sky-500 mt-[5px] shrink-0" />
+    <li className="flex items-start gap-1.5 text-[10px] text-gray-600 leading-snug print:text-[9.5px]">
+      <span className="w-1 h-1 rounded-full bg-sky-400 mt-[5px] shrink-0" />
       <span>{children}</span>
     </li>
   );
 }
 
 function ProjectItem({
-  name,
-  lines,
-  stack,
-  bullets,
+  name, lines, stack, bullets, github, live,
 }: {
-  name: string;
-  lines: string;
-  stack: string;
-  bullets: string[];
+  name: string; lines: string; stack: string; bullets: string[]; github?: string; live?: string;
 }) {
   return (
     <div>
-      <div className="flex items-center gap-2">
-        <h3 className="text-[11.5px] font-bold text-gray-900 print:text-[11px]">{name}</h3>
-        <span className="text-[8px] font-mono text-sky-600 bg-sky-50 px-1.5 py-0.5 rounded print:bg-sky-50">
-          {lines}
-        </span>
+      <div className="flex items-center gap-1.5 flex-wrap">
+        <h3 className="text-[11px] font-bold text-gray-900 print:text-[10.5px]">{name}</h3>
+        {lines !== "—" && (
+          <span className="text-[7.5px] font-mono text-sky-600 bg-sky-50 px-1.5 py-[1px] rounded border border-sky-100 print:bg-sky-50">
+            {lines} satır
+          </span>
+        )}
+        {github && (
+          <a href={`https://${github}`} className="text-[7.5px] font-mono text-gray-400 hover:text-sky-500 print:text-gray-400">
+            GitHub ↗
+          </a>
+        )}
+        {live && (
+          <a href={`https://${live}`} className="text-[7.5px] font-mono text-emerald-500 hover:text-emerald-400 print:text-emerald-500">
+            Live ↗
+          </a>
+        )}
       </div>
-      <p className="text-[9px] text-gray-400 font-mono mt-0.5">{stack}</p>
-      <ul className="mt-1 space-y-0.5">
+      <p className="text-[8.5px] text-gray-400 font-mono mt-0.5">{stack}</p>
+      <ul className="mt-1 space-y-[2px]">
         {bullets.map((b, i) => (
           <BulletItem key={i}>{b}</BulletItem>
         ))}
@@ -352,11 +395,31 @@ function ProjectItem({
   );
 }
 
-function SkillGroup({ label, items }: { label: string; items: string }) {
+function SkillGroup({ label, items }: { label: string; items: string[] }) {
   return (
     <div>
-      <span className="text-[9px] font-bold text-slate-700 uppercase tracking-wide">{label}</span>
-      <p className="text-[9.5px] text-gray-500 leading-snug print:text-[9px]">{items}</p>
+      <span className="text-[8.5px] font-bold text-slate-600 uppercase tracking-wide">{label}</span>
+      <div className="flex flex-wrap gap-0.5 mt-0.5">
+        {items.map((item) => (
+          <span key={item} className="text-[8px] px-1.5 py-[1px] rounded bg-slate-50 text-slate-600 border border-slate-100 print:bg-slate-50">
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function LangItem({ lang, level, pct }: { lang: string; level: string; pct: number }) {
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-0.5">
+        <span className="text-[9.5px] text-gray-700 font-medium">{lang}</span>
+        <span className="text-[8px] text-gray-400">{level}</span>
+      </div>
+      <div className="h-1 bg-gray-100 rounded-full overflow-hidden">
+        <div className="h-full bg-sky-400 rounded-full" style={{ width: `${pct}%` }} />
+      </div>
     </div>
   );
 }
