@@ -255,27 +255,17 @@ export default function CVContent() {
                 </div>
               </section>
 
-              {/* GELİŞTİRDİĞİM SİTELER */}
+              {/* FREELANCE WEB */}
               <section>
-                <SectionTitle icon="web">Kurumsal Web Siteleri</SectionTitle>
-                <div className="space-y-[3px]">
-                  {[
-                    { name: "crystal-portfolio", url: "crystal-portfolio-ecru.vercel.app" },
-                    { name: "cw-enerji-portfolio", url: "cw-enerji-portfolio.vercel.app" },
-                    { name: "barut-portfolio", url: "barut-portfolio.vercel.app" },
-                    { name: "agt-portfolio", url: "agt-portfolio.vercel.app" },
-                    { name: "kaya-portfolio", url: "kaya-portfolio.vercel.app" },
-                    { name: "turkerler-portfolio", url: "turkerler-portfolio.vercel.app" },
-                    { name: "sedat-portfolio", url: "sedat-portfolio-seven.vercel.app" },
-                  ].map((s) => (
-                    <a key={s.name} href={`https://${s.url}`} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-[8px] text-sky-600 hover:text-sky-500 print:text-sky-700 group">
-                      <svg className="w-2 h-2 text-sky-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                      <span className="group-hover:underline print:underline font-mono truncate">{s.name}</span>
-                    </a>
-                  ))}
+                <SectionTitle icon="web">Freelance Web Geliştirme</SectionTitle>
+                <div className="text-center py-2 rounded-lg bg-gradient-to-b from-sky-50 to-white border border-sky-100 mb-1.5">
+                  <div className="text-[16px] font-bold text-sky-700">7</div>
+                  <div className="text-[7.5px] text-slate-400 font-medium uppercase tracking-wide">Teslim Edilen Site</div>
                 </div>
-                <p className="text-[7.5px] text-gray-400 mt-1">Next.js · TypeScript · Tailwind · Vercel</p>
+                <p className="text-[8.5px] text-gray-500 leading-snug">
+                  Farklı sektörlerden firmalar için kurumsal web siteleri geliştirip teslim ettim.
+                </p>
+                <p className="text-[7.5px] text-gray-400 mt-1 font-mono">Next.js · TypeScript · Tailwind · Vercel</p>
               </section>
 
               {/* IE + DEV */}
