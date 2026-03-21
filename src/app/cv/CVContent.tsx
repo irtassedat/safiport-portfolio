@@ -22,29 +22,22 @@ export default function CVContent() {
         style={{ fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif" }}
       >
         {/* ══════════ HEADER ══════════ */}
-        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-sky-900 text-white px-7 pt-5 pb-4 print:px-7 print:pt-4 print:pb-3">
-          <div className="flex items-center gap-5">
-            {/* Profile Photo */}
+        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-sky-900 text-white px-7 pt-5 pb-3.5 print:px-7 print:pt-4 print:pb-3">
+          <div className="flex items-center gap-4">
             <div className="shrink-0 relative">
               <img
                 src="https://github.com/irtassedat.png"
                 alt="Sedat İrtaş"
-                className="w-[74px] h-[74px] rounded-full border-[3px] border-sky-400/60 object-cover print:w-[68px] print:h-[68px]"
+                className="w-[68px] h-[68px] rounded-full border-[3px] border-sky-400/60 object-cover print:w-[62px] print:h-[62px]"
               />
-              <div className="absolute -bottom-0.5 -right-0.5 w-5 h-5 bg-emerald-500 rounded-full border-2 border-slate-900 flex items-center justify-center">
+              <div className="absolute -bottom-0.5 -right-0.5 w-4.5 h-4.5 bg-emerald-500 rounded-full border-2 border-slate-900 flex items-center justify-center">
                 <svg className="w-2.5 h-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
               </div>
             </div>
-
-            {/* Name & Contact */}
             <div className="flex-1 min-w-0">
-              <h1 className="text-[22px] font-bold tracking-tight leading-tight print:text-[20px]">
-                Ebrar Sedat İrtaş
-              </h1>
-              <p className="text-sky-300 text-[13px] font-semibold mt-0.5 print:text-[12px]">
-                Endüstri Mühendisi & Full-Stack AI Developer
-              </p>
-              <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1.5 text-[9.5px] text-gray-300 print:text-[9px]">
+              <h1 className="text-[21px] font-bold tracking-tight leading-tight">Ebrar Sedat İrtaş</h1>
+              <p className="text-sky-300 text-[12px] font-semibold mt-0.5">Endüstri Mühendisi & Full-Stack AI Developer</p>
+              <div className="flex flex-wrap gap-x-3 mt-1.5 text-[9px] text-gray-300">
                 <span className="flex items-center gap-1">
                   <svg className="w-2.5 h-2.5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                   İzmit, Kocaeli
@@ -60,9 +53,8 @@ export default function CVContent() {
               </div>
             </div>
           </div>
-
-          {/* ── Link Buttons ── */}
-          <div className="flex flex-wrap gap-2 mt-3">
+          {/* Link Buttons */}
+          <div className="flex flex-wrap gap-1.5 mt-2.5">
             <LinkButton href="https://linkedin.com/in/sedatirtas" color="sky" icon="linkedin" label="LinkedIn" />
             <LinkButton href="https://github.com/irtassedat" color="gray" icon="github" label="GitHub · 54 Repo" />
             <LinkButton href="https://safiport-portfolio.vercel.app" color="orange" icon="globe" label="Portfolyo" />
@@ -71,72 +63,71 @@ export default function CVContent() {
         </div>
 
         {/* ══════════ METRICS ══════════ */}
-        <div className="px-7 pt-3 pb-0 print:px-7 print:pt-2.5">
-          <div className="grid grid-cols-5 gap-1.5">
+        <div className="px-7 pt-2.5 pb-0 print:pt-2">
+          <div className="grid grid-cols-6 gap-1.5">
             {[
-              { num: "130K+", label: "Satır Production Kod" },
-              { num: "400+", label: "REST API Endpoint" },
-              { num: "100+", label: "Veritabanı Modeli" },
-              { num: "8", label: "7/24 Canlı Servis" },
-              { num: "6", label: "Otonom Ajan Sistemi" },
+              { num: "150K+", label: "Satır Kod" },
+              { num: "400+", label: "API Endpoint" },
+              { num: "100+", label: "DB Modeli" },
+              { num: "11", label: "Docker Container" },
+              { num: "7+", label: "Otonom Ajan" },
+              { num: "7", label: "Teslim Edilen Site" },
             ].map((m) => (
               <div key={m.label} className="text-center py-1.5 rounded-lg bg-gradient-to-b from-slate-50 to-white border border-slate-100">
-                <div className="text-[14px] font-bold text-sky-700 print:text-[13px]">{m.num}</div>
-                <div className="text-[7.5px] text-slate-400 font-medium uppercase tracking-wide leading-tight">{m.label}</div>
+                <div className="text-[13px] font-bold text-sky-700">{m.num}</div>
+                <div className="text-[7px] text-slate-400 font-medium uppercase tracking-wide leading-tight">{m.label}</div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* ══════════ BODY — TWO COLUMNS ══════════ */}
-        <div className="px-7 pt-3 pb-4 print:px-7 print:pt-2.5 print:pb-3">
-          <div className="grid grid-cols-[1fr_172px] gap-5 print:grid-cols-[1fr_165px] print:gap-4">
+        {/* ══════════ BODY ══════════ */}
+        <div className="px-7 pt-2.5 pb-4 print:pt-2 print:pb-3">
+          <div className="grid grid-cols-[1fr_168px] gap-5 print:grid-cols-[1fr_162px] print:gap-4">
 
             {/* ▌LEFT COLUMN */}
-            <div className="space-y-2.5 print:space-y-2">
+            <div className="space-y-2 print:space-y-1.5">
 
               {/* PROFIL */}
               <section>
                 <SectionTitle icon="user">Profil</SectionTitle>
-                <p className="text-[10px] text-gray-600 leading-relaxed print:text-[9.5px]">
-                  Endüstri Mühendisliği mezunu, son 2 yılda bağımsız olarak enterprise seviye production sistemler geliştirdim.
-                  Linux VPS üzerinde Docker container&apos;larla 7/24 çalışan çok katmanlı mimariler kurup işletiyorum.
-                  Endüstri mühendisliği altyapımla süreç optimizasyonu, kapasite planlama ve darboğaz analizini
-                  yazılım çözümlerine dönüştürebiliyorum.
+                <p className="text-[9.5px] text-gray-600 leading-relaxed print:text-[9px]">
+                  Endüstri Mühendisliği mezunu. Son 2 yılda bağımsız olarak enterprise seviye production sistemler geliştirdim —
+                  Linux VPS üzerinde 11 Docker container 7/24 çalışıyor. Otonom ajan mimarileri, AI vision pipeline&apos;ları,
+                  çok modüllü bot ekosistemleri ve SaaS platformları kurup işletiyorum.
+                  IE altyapımla süreç optimizasyonu ve darboğaz analizini yazılım çözümlerine dönüştürüyorum.
                 </p>
               </section>
 
               {/* DENEYİM */}
               <section>
                 <SectionTitle icon="briefcase">Profesyonel Deneyim</SectionTitle>
-
-                <div className="mb-2 print:mb-1.5">
+                <div className="mb-1.5">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-[11px] font-bold text-gray-900">Bağımsız Yazılım Mühendisi</h3>
-                      <p className="text-[9px] text-sky-600 font-semibold">Full-Stack Development · AI Otomasyon · DevOps</p>
+                      <h3 className="text-[10.5px] font-bold text-gray-900">Bağımsız Yazılım Mühendisi</h3>
+                      <p className="text-[8.5px] text-sky-600 font-semibold">Full-Stack · AI Otomasyon · DevOps · Otonom Sistemler</p>
                     </div>
                     <DateBadge>2024 – Günümüz</DateBadge>
                   </div>
                   <ul className="mt-1 space-y-[2px]">
-                    <BulletItem>Fastify 5, Next.js 15-16, FastAPI, Spring Boot ile çok katmanlı RESTful API mimarileri tasarlayıp production&apos;a aldım</BulletItem>
-                    <BulletItem>PostgreSQL 16, Redis 7, Prisma ORM ile yüksek performanslı veritabanı tasarımları; 100+ model, 70+ index, migration yönetimi</BulletItem>
-                    <BulletItem>Claude API/SDK ve Gemini 2.0 Flash ile görüntü tanıma, doğal dil işleme ve otonom karar verme modülleri geliştirdim</BulletItem>
-                    <BulletItem>Docker Compose, Nginx reverse proxy, Cloudflare CDN, Tailscale VPN ile production altyapı kurulumu ve yönetimi</BulletItem>
-                    <BulletItem>ML tabanlı güvenlik: Isolation Forest anomali tespiti, adaptive intelligence scoring, fraud detection pipeline</BulletItem>
+                    <BulletItem>Fastify 5, Next.js 16, FastAPI, Spring Boot ile production API mimarileri; PostgreSQL 16, Redis 7, Prisma ORM ile 100+ model, 70+ index</BulletItem>
+                    <BulletItem>Claude Haiku Vision AI ile görüntü tanıma pipeline&apos;ı, Gemini 2.0 Flash ile doğal dil üretimi, MCP Server entegrasyonları</BulletItem>
+                    <BulletItem>7 otonom ajan sistemi: ödeme doğrulama, envanter takibi, bildirim yönetimi, workflow orkestrasyon, DLQ retry, Signal senkronizasyon</BulletItem>
+                    <BulletItem>Docker Compose ile 11 container, Nginx reverse proxy, Cloudflare CDN, Tailscale VPN — Ubuntu VPS üzerinde 7/24 production yönetimi</BulletItem>
+                    <BulletItem>Isolation Forest anomali tespiti, adaptive intelligence scoring, fraud detection pipeline, multi-brand veri izolasyonu</BulletItem>
                   </ul>
                 </div>
-
                 <div>
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-[11px] font-bold text-gray-900">Prometeon Tyre Group, Kocaeli</h3>
-                      <p className="text-[9px] text-sky-600 font-semibold">Stajyer — Endüstri Mühendisi · Ar-Ge Departmanı</p>
+                      <h3 className="text-[10.5px] font-bold text-gray-900">Prometeon Tyre Group, Kocaeli</h3>
+                      <p className="text-[8.5px] text-sky-600 font-semibold">Stajyer — Endüstri Mühendisi · Ar-Ge</p>
                     </div>
                     <DateBadge>2021</DateBadge>
                   </div>
                   <ul className="mt-1 space-y-[2px]">
-                    <BulletItem>Ar-Ge finansal raporlama, makine test verisi analizi ve üst yönetime sunum hazırlama</BulletItem>
+                    <BulletItem>Ar-Ge finansal raporlama, makine test verisi analizi, üst yönetime sunum hazırlama</BulletItem>
                   </ul>
                 </div>
               </section>
@@ -151,50 +142,62 @@ export default function CVContent() {
                     lines="64.900"
                     stack="Fastify 5 · Next.js 15 · React 19 · PostgreSQL 16 · Redis 7 · Python · Docker"
                     bullets={[
-                      "164 REST endpoint, 29 Prisma modeli, JWT + Argon2 auth, 5 kademeli yetkilendirme",
-                      "SSE gerçek zamanlı bildirim, gamifikasyon motoru, Claude AI chatbot entegrasyonu",
-                      "5 Docker container, Nginx, Cloudflare CDN — B2B gelir üreten canlı platform, Yandex #1",
+                      "164 REST endpoint, 29 Prisma modeli, JWT + Argon2, gamifikasyon motoru (puan/ödül/çekiliş/ticket event/referral)",
+                      "Python Telegram bot (12 handler), Claude AI chatbot, otonom monitoring agent (13 görev: uptime, SEO audit, trafik analiz)",
+                      "5 Docker container, SSE bildirim, IndexNow SEO, B2B gelir üreten canlı platform, Yandex #1 organik sıralama",
                     ]}
                   />
 
                   <ProjectItem
                     name="Akıllı Lojistik & Ödeme Platformu"
                     lines="34.600"
-                    stack="pnpm Monorepo · Fastify · React · Grammy Bot · Prisma · Docker Compose"
+                    stack="pnpm Monorepo · Fastify · React · Grammy · Prisma · Signal API · Docker (7 servis)"
                     bullets={[
-                      "6 otonom ajan mimarisi: Payment, Order, Inventory, Notification, Signal, Workflow + DLQ Retry",
-                      "HD Wallet (BIP32/39/44), multi-chain ödeme, coğrafi sorgulama, 72 saat anlaşmazlık sistemi",
+                      "7 otonom ajan: Payment (blockchain izleme), Order (yaşam döngüsü), Inventory (stok tahmin), Notification, Signal, Workflow, DLQ Retry",
+                      "HD Wallet (BIP32/39/44) — 6 blockchain: Bitcoin, Ethereum, BSC, Polygon, Tron, Litecoin; 72 saat anlaşmazlık sistemi",
+                      "Grammy Telegram bot (11 komut), React MiniApp (WebApp), 25 Prisma modeli, coğrafi sorgulama, çoklu marka izolasyonu",
                     ]}
                   />
 
                   <ProjectItem
                     name="Çok Modüllü Bot & AI Ekosistemi"
-                    lines="15.059"
-                    stack="Python 3.11 · FastAPI · Gemini 2.0 Flash · Telethon · SQLite"
+                    lines="26.469"
+                    stack="Python 3.11 · FastAPI · Gemini 2.0 Flash · Telethon · python-telegram-bot · SQLite"
                     bullets={[
-                      "4 mikro servis, Isolation Forest anomali tespiti, adaptive scoring, fraud detection",
-                      "FastAPI admin dashboard (39 template), SSE monitoring, event bus, 31 tablo, 70+ index",
+                      "4 mikro servis: Admin Dashboard (FastAPI + 39 Jinja2 template + SSE), Verification Bot, Autopost Bot, Member Bot",
+                      "Gemini AI canlı sohbet üretimi (API key rotation, rate limiting), akıllı kupon generator, mesaj harvesting, grup keşfi",
+                      "ML güvenlik: Isolation Forest, adaptive scoring, fraud detection (IP/username/clientID dedup), 31 tablo, 70+ index, multi-brand izolasyon",
+                    ]}
+                  />
+
+                  <ProjectItem
+                    name="Otonom Veri Toplama & AI Vision Sistemi"
+                    lines="5.000+"
+                    stack="FastAPI · Playwright · Claude Haiku Vision · PostgreSQL · Docker"
+                    bullets={[
+                      "7/24 otonom scraping pipeline (35dk döngü), Claude Haiku ile görüntü tanıma ($0.05/gün), sonuç doğrulama, sıralama sistemi",
+                      "86 kaynak takibi, 428+ veri noktası, otomatik başlatma, Playwright headless tarayıcı, SOCKS5 proxy rotasyonu",
                     ]}
                   />
 
                   <ProjectItem
                     name="QR Menü SaaS Platformu"
                     lines="12.685"
-                    stack="Node.js · Express · PostgreSQL · JWT · bcrypt"
+                    stack="Node.js · Express · PostgreSQL · JWT · bcrypt · NETGSM"
                     github="github.com/irtassedat/qrmenu"
                     live="qr.sebastianlogic.com"
                     bullets={[
-                      "184 endpoint, 46 tablo, 5 kademeli RBAC, çoklu şube, sadakat programı (4 tier), SMS OTP",
+                      "184 endpoint, 46 tablo, 5 kademeli RBAC, JSONB tema motoru, 4 tier sadakat programı, SMS OTP (NETGSM), çoklu şube",
                     ]}
                   />
 
                   <ProjectItem
                     name="E-Ticaret Platformu (Full-Stack)"
                     lines="—"
-                    stack="React · Redux · Java Spring Boot · Spring Security · PostgreSQL"
+                    stack="React · Redux · Java Spring Boot · Spring Security · JPA · PostgreSQL"
                     github="github.com/irtassedat/ecommerce"
                     bullets={[
-                      "Ürün katalog, sepet, ödeme frontend + RESTful backend API, JPA, stok/sipariş yönetimi",
+                      "Ürün katalog, sepet, ödeme frontend + RESTful backend API, Spring Data JPA, stok/sipariş yönetimi",
                     ]}
                   />
                 </div>
@@ -202,7 +205,7 @@ export default function CVContent() {
             </div>
 
             {/* ▌RIGHT COLUMN */}
-            <div className="space-y-2.5 print:space-y-2">
+            <div className="space-y-2 print:space-y-1.5">
 
               {/* EĞİTİM */}
               <section>
@@ -210,16 +213,16 @@ export default function CVContent() {
                 <div className="space-y-1.5">
                   <div className="pl-2 border-l-2 border-sky-300">
                     <h3 className="text-[10px] font-bold text-gray-900">Süleyman Demirel Üni.</h3>
-                    <p className="text-[9px] text-sky-600 font-semibold">Endüstri Mühendisliği</p>
-                    <p className="text-[8px] text-gray-400">2017 – 2024</p>
-                    <p className="text-[8px] text-gray-500 mt-0.5 leading-snug">
+                    <p className="text-[8.5px] text-sky-600 font-semibold">Endüstri Mühendisliği</p>
+                    <p className="text-[7.5px] text-gray-400">2017 – 2024</p>
+                    <p className="text-[7.5px] text-gray-500 mt-0.5 leading-snug">
                       Süreç optimizasyonu, kapasite planlama, kuyruk teorisi, yalın üretim, istatistiksel modelleme
                     </p>
                   </div>
                   <div className="pl-2 border-l-2 border-sky-300">
                     <h3 className="text-[10px] font-bold text-gray-900">Workintech</h3>
-                    <p className="text-[9px] text-sky-600 font-semibold">Full-Stack Web Dev.</p>
-                    <p className="text-[8px] text-gray-400">2023 – 2024 · 960 saat · 78 proje</p>
+                    <p className="text-[8.5px] text-sky-600 font-semibold">Full-Stack Web Dev.</p>
+                    <p className="text-[7.5px] text-gray-400">2023 – 2024 · 960 saat · 78 proje</p>
                   </div>
                 </div>
               </section>
@@ -231,8 +234,29 @@ export default function CVContent() {
                   <SkillGroup label="Frontend" items={["React 19", "Next.js 16", "TypeScript", "Tailwind 4", "Framer Motion"]} />
                   <SkillGroup label="Backend" items={["Fastify 5", "Express", "FastAPI", "Spring Boot", "Prisma"]} />
                   <SkillGroup label="Veritabanı" items={["PostgreSQL 16", "Redis 7", "SQLite"]} />
-                  <SkillGroup label="AI & ML" items={["Claude API", "Gemini AI", "MCP", "Vision AI"]} />
-                  <SkillGroup label="DevOps" items={["Docker", "Nginx", "Linux", "Cloudflare", "Vercel"]} />
+                  <SkillGroup label="AI & ML" items={["Claude API", "Gemini AI", "Vision AI", "MCP", "Isolation Forest"]} />
+                  <SkillGroup label="DevOps" items={["Docker", "Nginx", "Linux", "Cloudflare", "Vercel", "Tailscale"]} />
+                  <SkillGroup label="Bot & Scraping" items={["Telegram Bot", "Telethon", "Grammy", "Playwright"]} />
+                </div>
+              </section>
+
+              {/* ALTYAPI */}
+              <section>
+                <SectionTitle icon="server">Canlı Altyapı</SectionTitle>
+                <div className="rounded-lg bg-gradient-to-b from-slate-50 to-white border border-slate-100 p-2">
+                  <div className="grid grid-cols-2 gap-1.5 text-center">
+                    <div>
+                      <div className="text-[12px] font-bold text-sky-700">11</div>
+                      <div className="text-[7px] text-slate-400 uppercase">Docker Container</div>
+                    </div>
+                    <div>
+                      <div className="text-[12px] font-bold text-sky-700">3</div>
+                      <div className="text-[7px] text-slate-400 uppercase">PostgreSQL DB</div>
+                    </div>
+                  </div>
+                  <p className="text-[7.5px] text-gray-500 mt-1.5 leading-snug">
+                    Ubuntu 24.04 VPS, Tailscale VPN, 7/24 uptime monitoring, health check, otomatik yeniden başlatma
+                  </p>
                 </div>
               </section>
 
@@ -255,26 +279,12 @@ export default function CVContent() {
                 </div>
               </section>
 
-              {/* FREELANCE WEB */}
-              <section>
-                <SectionTitle icon="web">Freelance Web Geliştirme</SectionTitle>
-                <div className="text-center py-2 rounded-lg bg-gradient-to-b from-sky-50 to-white border border-sky-100 mb-1.5">
-                  <div className="text-[16px] font-bold text-sky-700">7</div>
-                  <div className="text-[7.5px] text-slate-400 font-medium uppercase tracking-wide">Teslim Edilen Site</div>
-                </div>
-                <p className="text-[8.5px] text-gray-500 leading-snug">
-                  Farklı sektörlerden firmalar için kurumsal web siteleri geliştirip teslim ettim.
-                </p>
-                <p className="text-[7.5px] text-gray-400 mt-1 font-mono">Next.js · TypeScript · Tailwind · Vercel</p>
-              </section>
-
               {/* IE + DEV */}
               <section>
                 <SectionTitle icon="puzzle">IE + Developer</SectionTitle>
-                <p className="text-[8.5px] text-gray-600 leading-snug print:text-[8px]">
-                  Endüstri mühendisliği süreçleri analiz etmeyi ve darboğazları tespit etmeyi,
-                  yazılım ise bunları ölçeklenebilir sistemlere dönüştürmeyi sağlıyor.
-                  Bu nadir kombinasyon, operasyonel verimliliği teknolojiyle buluşturan çözümler üretmemi mümkün kılıyor.
+                <p className="text-[8px] text-gray-600 leading-snug">
+                  Endüstri mühendisliği süreçleri analiz etmeyi, yazılım ise bunları ölçeklenebilir sistemlere dönüştürmeyi sağlıyor.
+                  Bu nadir kombinasyon operasyonel verimliliği teknolojiyle buluşturan çözümler üretmemi mümkün kılıyor.
                 </p>
               </section>
             </div>
@@ -282,21 +292,11 @@ export default function CVContent() {
         </div>
       </div>
 
-      {/* Print Styles */}
       <style>{`
         @media print {
-          @page {
-            size: A4;
-            margin: 0;
-          }
-          body {
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-          }
-          html, body {
-            width: 210mm;
-            height: 297mm;
-          }
+          @page { size: A4; margin: 0; }
+          body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+          html, body { width: 210mm; height: 297mm; }
         }
       `}</style>
     </div>
@@ -312,21 +312,15 @@ function LinkButton({ href, color, icon, label }: { href: string; color: string;
     orange: "bg-orange-500/20 text-orange-200 border-orange-400/30 hover:bg-orange-500/30",
     emerald: "bg-emerald-500/20 text-emerald-200 border-emerald-400/30 hover:bg-emerald-500/30",
   };
-
   const icons: Record<string, React.ReactNode> = {
-    linkedin: <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>,
-    github: <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>,
-    globe: <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>,
-    doc: <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>,
+    linkedin: <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>,
+    github: <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>,
+    globe: <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>,
+    doc: <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>,
   };
-
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9px] font-semibold border transition-colors print:px-2 print:py-0.5 print:text-[8.5px] ${colors[color]}`}
-    >
+    <a href={href} target="_blank" rel="noopener noreferrer"
+      className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[8.5px] font-semibold border transition-colors ${colors[color]}`}>
       {icons[icon]}
       {label}
       <svg className="w-2 h-2 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
@@ -344,12 +338,11 @@ function SectionTitle({ children, icon }: { children: React.ReactNode; icon: str
     globe: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />,
     award: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />,
     puzzle: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />,
-    web: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />,
+    server: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />,
   };
-
   return (
-    <h2 className="flex items-center gap-1.5 text-[9.5px] font-bold text-slate-700 uppercase tracking-wider border-b border-slate-200 pb-0.5 mb-1.5 print:text-[9px] print:mb-1">
-      <svg className="w-3 h-3 text-sky-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">{icons[icon]}</svg>
+    <h2 className="flex items-center gap-1 text-[9px] font-bold text-slate-700 uppercase tracking-wider border-b border-slate-200 pb-0.5 mb-1 print:text-[8.5px]">
+      <svg className="w-2.5 h-2.5 text-sky-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">{icons[icon]}</svg>
       {children}
     </h2>
   );
@@ -357,7 +350,7 @@ function SectionTitle({ children, icon }: { children: React.ReactNode; icon: str
 
 function DateBadge({ children }: { children: React.ReactNode }) {
   return (
-    <span className="text-[8px] text-sky-600 font-semibold bg-sky-50 px-2 py-0.5 rounded-full whitespace-nowrap border border-sky-100">
+    <span className="text-[7.5px] text-sky-600 font-semibold bg-sky-50 px-1.5 py-0.5 rounded-full whitespace-nowrap border border-sky-100">
       {children}
     </span>
   );
@@ -365,7 +358,7 @@ function DateBadge({ children }: { children: React.ReactNode }) {
 
 function BulletItem({ children }: { children: React.ReactNode }) {
   return (
-    <li className="flex items-start gap-1.5 text-[9.5px] text-gray-600 leading-snug print:text-[9px]">
+    <li className="flex items-start gap-1 text-[9px] text-gray-600 leading-snug print:text-[8.5px]">
       <span className="w-1 h-1 rounded-full bg-sky-400 mt-[4px] shrink-0" />
       <span>{children}</span>
     </li>
@@ -379,29 +372,29 @@ function ProjectItem({
 }) {
   return (
     <div>
-      <div className="flex items-center gap-1.5 flex-wrap">
-        <h3 className="text-[10.5px] font-bold text-gray-900 print:text-[10px]">{name}</h3>
+      <div className="flex items-center gap-1 flex-wrap">
+        <h3 className="text-[10px] font-bold text-gray-900 print:text-[9.5px]">{name}</h3>
         {lines !== "—" && (
-          <span className="text-[7px] font-mono text-sky-600 bg-sky-50 px-1.5 py-[1px] rounded border border-sky-100">
+          <span className="text-[7px] font-mono text-sky-600 bg-sky-50 px-1 py-[1px] rounded border border-sky-100">
             {lines} satır
           </span>
         )}
         {github && (
           <a href={`https://${github}`} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-0.5 text-[7.5px] font-semibold text-white bg-gray-800 hover:bg-gray-700 px-1.5 py-[1px] rounded print:text-gray-800 print:bg-gray-100">
+            className="inline-flex items-center gap-0.5 text-[7px] font-semibold text-white bg-gray-800 hover:bg-gray-700 px-1.5 py-[1px] rounded print:text-gray-800 print:bg-gray-100">
             <svg className="w-2 h-2" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             GitHub
           </a>
         )}
         {live && (
           <a href={`https://${live}`} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-0.5 text-[7.5px] font-semibold text-white bg-emerald-600 hover:bg-emerald-500 px-1.5 py-[1px] rounded print:text-emerald-700 print:bg-emerald-50">
+            className="inline-flex items-center gap-0.5 text-[7px] font-semibold text-white bg-emerald-600 hover:bg-emerald-500 px-1.5 py-[1px] rounded print:text-emerald-700 print:bg-emerald-50">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse" />
-            Canlı Demo
+            Canlı
           </a>
         )}
       </div>
-      <p className="text-[8px] text-gray-400 font-mono mt-0.5">{stack}</p>
+      <p className="text-[7.5px] text-gray-400 font-mono mt-0.5">{stack}</p>
       <ul className="mt-0.5 space-y-[1px]">
         {bullets.map((b, i) => (
           <BulletItem key={i}>{b}</BulletItem>
@@ -414,10 +407,10 @@ function ProjectItem({
 function SkillGroup({ label, items }: { label: string; items: string[] }) {
   return (
     <div>
-      <span className="text-[8px] font-bold text-slate-600 uppercase tracking-wide">{label}</span>
+      <span className="text-[7.5px] font-bold text-slate-600 uppercase tracking-wide">{label}</span>
       <div className="flex flex-wrap gap-0.5 mt-0.5">
         {items.map((item) => (
-          <span key={item} className="text-[7.5px] px-1.5 py-[1px] rounded bg-slate-50 text-slate-600 border border-slate-100">
+          <span key={item} className="text-[7px] px-1 py-[1px] rounded bg-slate-50 text-slate-600 border border-slate-100">
             {item}
           </span>
         ))}
@@ -430,8 +423,8 @@ function LangItem({ lang, level, pct }: { lang: string; level: string; pct: numb
   return (
     <div>
       <div className="flex items-center justify-between mb-0.5">
-        <span className="text-[9px] text-gray-700 font-medium">{lang}</span>
-        <span className="text-[7.5px] text-gray-400">{level}</span>
+        <span className="text-[8.5px] text-gray-700 font-medium">{lang}</span>
+        <span className="text-[7px] text-gray-400">{level}</span>
       </div>
       <div className="h-1 bg-gray-100 rounded-full overflow-hidden">
         <div className="h-full bg-gradient-to-r from-sky-400 to-sky-500 rounded-full" style={{ width: `${pct}%` }} />
@@ -442,11 +435,11 @@ function LangItem({ lang, level, pct }: { lang: string; level: string; pct: numb
 
 function CertItem({ name, org }: { name: string; org: string }) {
   return (
-    <div className="flex items-center gap-1.5">
+    <div className="flex items-center gap-1">
       <div className="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0" />
       <div>
-        <p className="text-[9px] text-gray-700 font-medium">{name}</p>
-        <p className="text-[7.5px] text-gray-400">{org}</p>
+        <p className="text-[8.5px] text-gray-700 font-medium">{name}</p>
+        <p className="text-[7px] text-gray-400">{org}</p>
       </div>
     </div>
   );
