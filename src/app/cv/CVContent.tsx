@@ -116,6 +116,7 @@ export default function CVContent() {
                     <BulletItem>7 otonom ajan sistemi: ödeme doğrulama, envanter takibi, bildirim yönetimi, workflow orkestrasyon, DLQ retry, Signal senkronizasyon</BulletItem>
                     <BulletItem>Docker Compose ile 11 container, Nginx reverse proxy, Cloudflare CDN, Tailscale VPN — Ubuntu VPS üzerinde 7/24 production yönetimi</BulletItem>
                     <BulletItem>Isolation Forest anomali tespiti, adaptive intelligence scoring, fraud detection pipeline, multi-brand veri izolasyonu</BulletItem>
+                    <BulletItem>Otonom SEO monitoring: canonical/meta tag validasyon, broken link tespiti, dinamik sitemap, IndexNow entegrasyonu, Yandex/Google sıralama takibi</BulletItem>
                   </ul>
                 </div>
                 <div>
